@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="344" id="eIx-EJ-4fh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="344" id="eIx-EJ-4fh" customClass="MomentCell" customModule="BabyMoment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="344"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eIx-EJ-4fh" id="jyu-57-wRp">
@@ -94,6 +94,14 @@
                                                 <constraint firstItem="k0u-mH-HWz" firstAttribute="top" secondItem="FZJ-rq-Gng" secondAttribute="bottom" constant="8" id="zH9-QS-XTA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="comments" destination="FZJ-rq-Gng" id="6zS-8i-Pox"/>
+                                            <outlet property="day" destination="e89-nS-XGF" id="PCp-tg-hFH"/>
+                                            <outlet property="heroImage" destination="ZN8-Ss-tDd" id="WDS-xi-JSB"/>
+                                            <outlet property="textField" destination="k0u-mH-HWz" id="jIa-zm-yZA"/>
+                                            <outlet property="time" destination="uT7-13-eav" id="Jmj-9h-hcL"/>
+                                            <outlet property="yearMonth" destination="TKx-GB-gtY" id="WDs-18-tRh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

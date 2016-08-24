@@ -14,6 +14,10 @@
 		D0C90F421D6D489800D53A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F401D6D489800D53A57 /* LaunchScreen.storyboard */; };
 		D0C90F4D1D6D489900D53A57 /* BabyMomentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F4C1D6D489900D53A57 /* BabyMomentTests.swift */; };
 		D0C90F5D1D6D722400D53A57 /* MomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F5C1D6D722400D53A57 /* MomentCell.swift */; };
+		D0C90F601D6D778700D53A57 /* XLPhotoManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F5F1D6D778700D53A57 /* XLPhotoManager.storyboard */; };
+		D0C90F641D6D7D5E00D53A57 /* XLAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F631D6D7D5E00D53A57 /* XLAlbumCell.swift */; };
+		D0C90F661D6D7D9C00D53A57 /* XLAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F651D6D7D9C00D53A57 /* XLAlbumViewController.swift */; };
+		D0C90F691D6D823600D53A57 /* XLAlbumItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F681D6D823600D53A57 /* XLAlbumItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		D0C90F4C1D6D489900D53A57 /* BabyMomentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyMomentTests.swift; sourceTree = "<group>"; };
 		D0C90F4E1D6D489900D53A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C90F5C1D6D722400D53A57 /* MomentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentCell.swift; sourceTree = "<group>"; };
+		D0C90F5F1D6D778700D53A57 /* XLPhotoManager.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XLPhotoManager.storyboard; sourceTree = "<group>"; };
+		D0C90F631D6D7D5E00D53A57 /* XLAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLAlbumCell.swift; sourceTree = "<group>"; };
+		D0C90F651D6D7D9C00D53A57 /* XLAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLAlbumViewController.swift; sourceTree = "<group>"; };
+		D0C90F681D6D823600D53A57 /* XLAlbumItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLAlbumItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,7 @@
 		D0C90F361D6D489800D53A57 /* BabyMoment */ = {
 			isa = PBXGroup;
 			children = (
+				D0C90F5E1D6D774B00D53A57 /* PhotoManager */,
 				D0C90F5B1D6D720C00D53A57 /* Cell */,
 				D0C90F5A1D6D48DC00D53A57 /* Assets */,
 				D0C90F591D6D48D300D53A57 /* Controller */,
@@ -137,6 +146,42 @@
 				D0C90F5C1D6D722400D53A57 /* MomentCell.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		D0C90F5E1D6D774B00D53A57 /* PhotoManager */ = {
+			isa = PBXGroup;
+			children = (
+				D0C90F671D6D822300D53A57 /* Model */,
+				D0C90F621D6D7D3F00D53A57 /* Cell */,
+				D0C90F611D6D7D3300D53A57 /* ViewController */,
+				D0C90F5F1D6D778700D53A57 /* XLPhotoManager.storyboard */,
+			);
+			name = PhotoManager;
+			path = PhotoManger;
+			sourceTree = "<group>";
+		};
+		D0C90F611D6D7D3300D53A57 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0C90F651D6D7D9C00D53A57 /* XLAlbumViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		D0C90F621D6D7D3F00D53A57 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D0C90F631D6D7D5E00D53A57 /* XLAlbumCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		D0C90F671D6D822300D53A57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0C90F681D6D823600D53A57 /* XLAlbumItem.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C90F421D6D489800D53A57 /* LaunchScreen.storyboard in Resources */,
+				D0C90F601D6D778700D53A57 /* XLPhotoManager.storyboard in Resources */,
 				D0C90F3F1D6D489800D53A57 /* Assets.xcassets in Resources */,
 				D0C90F3D1D6D489800D53A57 /* Main.storyboard in Resources */,
 			);
@@ -241,7 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C90F3A1D6D489800D53A57 /* ViewController.swift in Sources */,
+				D0C90F641D6D7D5E00D53A57 /* XLAlbumCell.swift in Sources */,
+				D0C90F661D6D7D9C00D53A57 /* XLAlbumViewController.swift in Sources */,
 				D0C90F5D1D6D722400D53A57 /* MomentCell.swift in Sources */,
+				D0C90F691D6D823600D53A57 /* XLAlbumItem.swift in Sources */,
 				D0C90F381D6D489800D53A57 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

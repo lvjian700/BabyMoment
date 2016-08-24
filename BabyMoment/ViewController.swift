@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.tableView.estimatedRowHeight = 314
         self.tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -29,6 +31,22 @@ extension ViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MomentCell
         return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        PHPhotoLibrary.requestAuthorization { (status) -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                if (status == PHAuthorizationStatus.Authorized) {
+                    let picker = UIStoryboard.init(name: "XLPhotoManager", bundle: nil).instantiateViewControllerWithIdentifier("XLPhotoNavigator") as! UINavigationController
+//                    let albumVC = picker.topViewController as! XLAlbumViewController
+                    self.presentViewController(picker, animated: true, completion: nil)
+                } else {
+                    print("NoPhotoAuthorization")
+                }
+            })
+        }
     }
 }
 

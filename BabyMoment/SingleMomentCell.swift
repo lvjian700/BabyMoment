@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MomentCell: UITableViewCell {
+class SingleMomentCell: UITableViewCell {
     
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var yearMonth: UILabel!

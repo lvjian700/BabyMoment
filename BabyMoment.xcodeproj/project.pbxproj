@@ -10,13 +10,15 @@
 		D0ADE0541D6E92200079AE3C /* XLPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */; };
 		D0ADE0561D6E94A20079AE3C /* XLPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0551D6E94A20079AE3C /* XLPhotoCell.swift */; };
 		D0ADE0581D6E96F00079AE3C /* XLPhotoFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0571D6E96F00079AE3C /* XLPhotoFooterView.swift */; };
+		D0ADE05A1D6ED5640079AE3C /* DoubleMomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0591D6ED5640079AE3C /* DoubleMomentCell.swift */; };
+		D0ADE05D1D6ED6220079AE3C /* MomentCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE05C1D6ED6220079AE3C /* MomentCellModel.swift */; };
 		D0C90F381D6D489800D53A57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F371D6D489800D53A57 /* AppDelegate.swift */; };
 		D0C90F3A1D6D489800D53A57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F391D6D489800D53A57 /* ViewController.swift */; };
 		D0C90F3D1D6D489800D53A57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F3B1D6D489800D53A57 /* Main.storyboard */; };
 		D0C90F3F1D6D489800D53A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F3E1D6D489800D53A57 /* Assets.xcassets */; };
 		D0C90F421D6D489800D53A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F401D6D489800D53A57 /* LaunchScreen.storyboard */; };
 		D0C90F4D1D6D489900D53A57 /* BabyMomentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F4C1D6D489900D53A57 /* BabyMomentTests.swift */; };
-		D0C90F5D1D6D722400D53A57 /* MomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F5C1D6D722400D53A57 /* MomentCell.swift */; };
+		D0C90F5D1D6D722400D53A57 /* SingleMomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F5C1D6D722400D53A57 /* SingleMomentCell.swift */; };
 		D0C90F601D6D778700D53A57 /* XLPhotoManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F5F1D6D778700D53A57 /* XLPhotoManager.storyboard */; };
 		D0C90F641D6D7D5E00D53A57 /* XLAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F631D6D7D5E00D53A57 /* XLAlbumCell.swift */; };
 		D0C90F661D6D7D9C00D53A57 /* XLAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F651D6D7D9C00D53A57 /* XLAlbumViewController.swift */; };
@@ -37,6 +39,8 @@
 		D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoViewController.swift; sourceTree = "<group>"; };
 		D0ADE0551D6E94A20079AE3C /* XLPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoCell.swift; sourceTree = "<group>"; };
 		D0ADE0571D6E96F00079AE3C /* XLPhotoFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoFooterView.swift; sourceTree = "<group>"; };
+		D0ADE0591D6ED5640079AE3C /* DoubleMomentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleMomentCell.swift; sourceTree = "<group>"; };
+		D0ADE05C1D6ED6220079AE3C /* MomentCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentCellModel.swift; sourceTree = "<group>"; };
 		D0C90F341D6D489800D53A57 /* BabyMoment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyMoment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C90F371D6D489800D53A57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C90F391D6D489800D53A57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +51,7 @@
 		D0C90F481D6D489900D53A57 /* BabyMomentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyMomentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C90F4C1D6D489900D53A57 /* BabyMomentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyMomentTests.swift; sourceTree = "<group>"; };
 		D0C90F4E1D6D489900D53A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0C90F5C1D6D722400D53A57 /* MomentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentCell.swift; sourceTree = "<group>"; };
+		D0C90F5C1D6D722400D53A57 /* SingleMomentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMomentCell.swift; sourceTree = "<group>"; };
 		D0C90F5F1D6D778700D53A57 /* XLPhotoManager.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XLPhotoManager.storyboard; sourceTree = "<group>"; };
 		D0C90F631D6D7D5E00D53A57 /* XLAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLAlbumCell.swift; sourceTree = "<group>"; };
 		D0C90F651D6D7D9C00D53A57 /* XLAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLAlbumViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0ADE05B1D6ED5F80079AE3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0ADE05C1D6ED6220079AE3C /* MomentCellModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		D0C90F2B1D6D489800D53A57 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +105,7 @@
 		D0C90F361D6D489800D53A57 /* BabyMoment */ = {
 			isa = PBXGroup;
 			children = (
+				D0ADE05B1D6ED5F80079AE3C /* Model */,
 				D0C90F5E1D6D774B00D53A57 /* PhotoManager */,
 				D0C90F5B1D6D720C00D53A57 /* Cell */,
 				D0C90F5A1D6D48DC00D53A57 /* Assets */,
@@ -149,7 +162,8 @@
 		D0C90F5B1D6D720C00D53A57 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D0C90F5C1D6D722400D53A57 /* MomentCell.swift */,
+				D0C90F5C1D6D722400D53A57 /* SingleMomentCell.swift */,
+				D0ADE0591D6ED5640079AE3C /* DoubleMomentCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -295,13 +309,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0ADE05D1D6ED6220079AE3C /* MomentCellModel.swift in Sources */,
+				D0ADE05A1D6ED5640079AE3C /* DoubleMomentCell.swift in Sources */,
 				D0C90F3A1D6D489800D53A57 /* ViewController.swift in Sources */,
 				D0C90F641D6D7D5E00D53A57 /* XLAlbumCell.swift in Sources */,
 				D0ADE0561D6E94A20079AE3C /* XLPhotoCell.swift in Sources */,
 				D0ADE0541D6E92200079AE3C /* XLPhotoViewController.swift in Sources */,
 				D0ADE0581D6E96F00079AE3C /* XLPhotoFooterView.swift in Sources */,
 				D0C90F661D6D7D9C00D53A57 /* XLAlbumViewController.swift in Sources */,
-				D0C90F5D1D6D722400D53A57 /* MomentCell.swift in Sources */,
+				D0C90F5D1D6D722400D53A57 /* SingleMomentCell.swift in Sources */,
 				D0C90F691D6D823600D53A57 /* XLAlbumItem.swift in Sources */,
 				D0C90F381D6D489800D53A57 /* AppDelegate.swift in Sources */,
 			);

@@ -12,30 +12,17 @@ import Photos
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-  
+    var cellModels: [MomentCellModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
-        self.tableView.delegate = self
+        self.tableView.tableFooterView = UIView()
         self.tableView.estimatedRowHeight = 314
         self.tableView.rowHeight = UITableViewAutomaticDimension
     }
-}
-
-extension ViewController: UITableViewDataSource {
-  
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-  
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MomentCell
-        return cell
-    }
-}
-
-extension ViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+    @IBAction func selectPhoto(sender: AnyObject) {
         PHPhotoLibrary.requestAuthorization { [weak self] status -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if (status == PHAuthorizationStatus.Authorized) {
@@ -48,11 +35,26 @@ extension ViewController: UITableViewDelegate {
             })
         }
     }
+    
+}
+
+extension ViewController: UITableViewDataSource {
+  
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellModels.count
+    }
+  
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath) as! SingleMomentCell
+        return cell
+    }
 }
 
 extension ViewController: XLPhotoDelegate {
     func didSelectPhotos(selectedAsset: [PHAsset]) {
         print(selectedAsset.count)
+        let cellModel = MomentCellModel(asset: selectedAsset)
+        cellModels.append(cellModel)
     }
 }
 

@@ -36,17 +36,23 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        PHPhotoLibrary.requestAuthorization { (status) -> Void in
+        PHPhotoLibrary.requestAuthorization { [weak self] status -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if (status == PHAuthorizationStatus.Authorized) {
-                    let picker = UIStoryboard.init(name: "XLPhotoManager", bundle: nil).instantiateViewControllerWithIdentifier("XLPhotoNavigator") as! UINavigationController
-//                    let albumVC = picker.topViewController as! XLAlbumViewController
-                    self.presentViewController(picker, animated: true, completion: nil)
+                    let picker = UIStoryboard.init(name: "XLPhotoManager", bundle: nil).instantiateViewControllerWithIdentifier("XLPhotoNavigator") as! XLNavigationViewController
+                    picker.photoDelegate = self
+                    self?.presentViewController(picker, animated: true, completion: nil)
                 } else {
                     print("NoPhotoAuthorization")
                 }
             })
         }
+    }
+}
+
+extension ViewController: XLPhotoDelegate {
+    func didSelectPhotos(selectedAsset: [PHAsset]) {
+        print(selectedAsset.count)
     }
 }
 

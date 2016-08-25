@@ -9,6 +9,10 @@
 import UIKit
 import Photos
 
+class XLNavigationViewController: UINavigationController {
+    weak var photoDelegate: XLPhotoDelegate?
+}
+
 class XLAlbumViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -18,10 +22,12 @@ class XLAlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = 107
         tableView.tableFooterView = UIView()
         
         configAlbumTableView()
+        directJumpToPhotoPage()
     }
     
     @IBAction func cancelAction(sender: AnyObject) {
@@ -62,9 +68,28 @@ class XLAlbumViewController: UIViewController {
             }
         }
     }
+    
+    private func directJumpToPhotoPage() {
+        let photoViewController = getPhotoViewControllerByFetchResult(getFetchResultByPHAssetCollection(albumItems[0].assetCollection))
+        self.navigationController?.pushViewController(photoViewController, animated: false)
+    }
+    
+    private func getPhotoViewControllerByFetchResult(fetchResult: PHFetchResult) -> XLPhotoViewController {
+        let photoViewController = UIStoryboard.init(name: "XLPhotoManager", bundle: nil).instantiateViewControllerWithIdentifier("XLPhotoViewController") as! XLPhotoViewController
+        photoViewController.fetchResult = fetchResult
+        return photoViewController
+    }
+    
+    private func getFetchResultByPHAssetCollection(assetCollection: PHAssetCollection) -> PHFetchResult {
+        let options = PHFetchOptions()
+        options.sortDescriptors = [
+            NSSortDescriptor(key: "creationDate", ascending: true)
+        ]
+        return PHAsset.fetchAssetsInAssetCollection(assetCollection, options: nil)
+    }
 }
 
-extension XLAlbumViewController: UITableViewDataSource {
+extension XLAlbumViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return albumItems.count
     }
@@ -73,5 +98,10 @@ extension XLAlbumViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("AlbumCell", forIndexPath: indexPath) as! XLAlbumCell
         cell.configCell(albumItems[indexPath.row].albumTitle, assetCollection: albumItems[indexPath.row].assetCollection)
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let photoViewController = getPhotoViewControllerByFetchResult(getFetchResultByPHAssetCollection(albumItems[indexPath.row].assetCollection))
+        self.navigationController?.pushViewController(photoViewController, animated: true)
     }
 }

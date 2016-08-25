@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-class SingleMomentCell: UITableViewCell {
+class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var yearMonth: UILabel!
@@ -18,8 +18,26 @@ class SingleMomentCell: UITableViewCell {
     @IBOutlet weak var comments: UILabel!
     @IBOutlet weak var textField: UITextField!
     
+    var saveAction: ((content: String) -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        textField.delegate = self
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        saveAction?(content: textField.text ?? "")
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func setDate(date: NSDate) {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "dd"
+        day.text = formatter.stringFromDate(date)
+        
+        formatter.dateFormat = "yyyy.MM"
+        yearMonth.text = formatter.stringFromDate(date)
     }
 }
 

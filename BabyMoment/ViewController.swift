@@ -37,7 +37,6 @@ class ViewController: UIViewController {
             })
         }
     }
-    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -47,14 +46,23 @@ extension ViewController: UITableViewDataSource {
     }
   
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if cellModels[indexPath.row].asset.count > 1 {
+        var cellModel = cellModels[indexPath.row]
+        if cellModel.asset.count > 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("DoubleMomentCell", forIndexPath: indexPath) as! DoubleMomentCell
-            cell.setImageFromLocal(cell.heroImage, asset: cellModels[indexPath.row].asset[0])
-            cell.setImageFromLocal(cell.secondImage, asset: cellModels[indexPath.row].asset[1])
+            cell.setImageFromLocal(cell.heroImage, asset: cellModel.asset[0])
+            cell.setImageFromLocal(cell.secondImage, asset: cellModel.asset[1])
+            
+            cell.saveAction = { content in
+                cell.comments.text = content
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath) as! SingleMomentCell
-            cell.setImageFromLocal(cell.heroImage, asset: cellModels[indexPath.row].asset[0])
+            cell.setImageFromLocal(cell.heroImage, asset: cellModel.asset[0])
+            cell.setDate(cellModel.currentDate!)
+            cell.saveAction = { content in
+                cell.comments.text = content
+            }
             return cell
         }
     }

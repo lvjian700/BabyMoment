@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DoubleMomentCell: UITableViewCell {
+class DoubleMomentCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var yearMonth: UILabel!
@@ -18,7 +18,16 @@ class DoubleMomentCell: UITableViewCell {
     @IBOutlet weak var comments: UILabel!
     @IBOutlet weak var textField: UITextField!
     
+    var saveAction: ((content: String) -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        textField.delegate = self
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        saveAction?(content: textField.text ?? "")
+        textField.resignFirstResponder()
+        return true
     }
 }

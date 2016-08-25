@@ -12,6 +12,8 @@ import Photos
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var birthday: String?
   
     override func viewDidLoad() {
         super.viewDidLoad()

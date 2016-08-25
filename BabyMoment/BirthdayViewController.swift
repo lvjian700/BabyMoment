@@ -27,4 +27,12 @@ class BirthdayViewController: UIViewController {
         birthday_picker.maximumDate = NSDate()
         // Do any additional setup after loading the view.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "GoTabView" {
+            let tabVC = segue.destinationViewController as? ViewController
+            
+            tabVC?.birthday = birthday
+        }
+    }
 }

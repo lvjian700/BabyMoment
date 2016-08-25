@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="344" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lnl-OE-M2q">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="344" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lnl-OE-M2q">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="344" id="eIx-EJ-4fh" customClass="MomentCell" customModule="BabyMoment" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="344"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="344"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eIx-EJ-4fh" id="jyu-57-wRp">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="343"/>
@@ -169,6 +169,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rKB-iO-BtL" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="WMK-El-ZrQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="tYl-JU-PVa">
                         <autoresizingMask key="autoresizingMask"/>
@@ -214,6 +215,7 @@
                                 <state key="normal" title="确认"/>
                                 <connections>
                                     <action selector="submit_birthday:" destination="2oT-FH-lyJ" eventType="touchUpInside" id="ykU-ug-Lfi"/>
+                                    <segue destination="rKB-iO-BtL" kind="push" identifier="GoTabView" id="LS9-hE-YsY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -226,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyn-XR-Txn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="52"/>
+            <point key="canvasLocation" x="86" y="58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xon-oi-4I4">

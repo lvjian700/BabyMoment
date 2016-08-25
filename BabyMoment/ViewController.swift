@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import HEXColor
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.tintColor = UIColor(rgba: "#F6DC6E")
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
         self.tableView.estimatedRowHeight = 314
@@ -47,9 +49,12 @@ extension ViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if cellModels[indexPath.row].asset.count > 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("DoubleMomentCell", forIndexPath: indexPath) as! DoubleMomentCell
+            cell.setImageFromLocal(cell.heroImage, asset: cellModels[indexPath.row].asset[0])
+            cell.setImageFromLocal(cell.secondImage, asset: cellModels[indexPath.row].asset[1])
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath) as! SingleMomentCell
+            cell.setImageFromLocal(cell.heroImage, asset: cellModels[indexPath.row].asset[0])
             return cell
         }
     }
@@ -57,9 +62,11 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: XLPhotoDelegate {
     func didSelectPhotos(selectedAsset: [PHAsset]) {
-        print(selectedAsset.count)
-        let cellModel = MomentCellModel(asset: selectedAsset)
-        cellModels.append(cellModel)
+        if selectedAsset.count > 0 {
+            let cellModel = MomentCellModel(asset: selectedAsset)
+            cellModels.append(cellModel)
+            tableView.reloadData()
+        }
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class SingleMomentCell: UITableViewCell {
     
@@ -19,5 +20,20 @@ class SingleMomentCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+}
+
+extension UITableViewCell {
+    func setImageFromLocal(imageView: UIImageView, asset: PHAsset) {
+        let request = PHImageRequestOptions()
+        request.resizeMode = .Exact
+        request.deliveryMode = .HighQualityFormat
+        let manager = PHImageManager.defaultManager()
+        let scale = UIScreen.mainScreen().scale
+        let width = UIScreen.mainScreen().bounds.width
+        let targetSize = CGSize(width: width * scale, height: width * 0.618 * scale)
+        manager.requestImageForAsset(asset, targetSize: targetSize, contentMode: PHImageContentMode.AspectFill, options: request) { (image, _) -> Void in
+            imageView.image = image
+        }
     }
 }

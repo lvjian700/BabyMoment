@@ -103,7 +103,7 @@
                                             <outlet property="yearMonth" destination="TKx-GB-gtY" id="WDs-18-tRh"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DoublePhotoCell" rowHeight="344" id="JuK-2r-VwN" customClass="DoubleMomentCell" customModule="BabyMoment" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DoubleMomentCell" rowHeight="344" id="JuK-2r-VwN" customClass="DoubleMomentCell" customModule="BabyMoment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="372" width="375" height="344"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JuK-2r-VwN" id="ajD-Ht-ezv">
@@ -159,8 +159,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby" translatesAutoresizingMaskIntoConstraints="NO" id="p1p-Gp-L34">
-                                                    <rect key="frame" x="192" y="118" width="163" height="134"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby" translatesAutoresizingMaskIntoConstraints="NO" id="p1p-Gp-L34">
+                                                    <rect key="frame" x="192" y="112" width="163" height="140"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -170,6 +170,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="p1p-Gp-L34" secondAttribute="trailing" constant="20" id="9Zh-t3-4vK"/>
                                                 <constraint firstItem="SKq-DI-i2b" firstAttribute="top" secondItem="p1p-Gp-L34" secondAttribute="bottom" constant="20" id="JU8-4O-N6O"/>
                                                 <constraint firstItem="s6C-aS-R5y" firstAttribute="top" secondItem="SKq-DI-i2b" secondAttribute="bottom" constant="8" id="Kml-Wf-xv3"/>
+                                                <constraint firstItem="p1p-Gp-L34" firstAttribute="height" secondItem="ZNU-Ss-kCE" secondAttribute="height" id="PSE-A5-20P"/>
                                                 <constraint firstItem="p1p-Gp-L34" firstAttribute="leading" secondItem="ZNU-Ss-kCE" secondAttribute="trailing" constant="8" id="RX8-sv-9R6"/>
                                                 <constraint firstItem="DV1-2B-52a" firstAttribute="leading" secondItem="ajD-Ht-ezv" secondAttribute="leading" constant="20" id="Uue-AF-niB"/>
                                                 <constraint firstItem="s6C-aS-R5y" firstAttribute="leading" secondItem="ajD-Ht-ezv" secondAttribute="leading" constant="20" id="W4D-fh-a3z"/>
@@ -178,7 +179,6 @@
                                                 <constraint firstItem="qGO-pP-htI" firstAttribute="leading" secondItem="DV1-2B-52a" secondAttribute="trailing" constant="20" id="bQT-zm-WVp"/>
                                                 <constraint firstAttribute="bottom" secondItem="s6C-aS-R5y" secondAttribute="bottom" constant="16" id="can-BH-VOg"/>
                                                 <constraint firstAttribute="trailing" secondItem="SKq-DI-i2b" secondAttribute="trailing" constant="20" id="fEE-mg-iza"/>
-                                                <constraint firstItem="p1p-Gp-L34" firstAttribute="top" secondItem="qGO-pP-htI" secondAttribute="bottom" constant="26" id="jcx-db-L1D"/>
                                                 <constraint firstItem="ZNU-Ss-kCE" firstAttribute="width" secondItem="p1p-Gp-L34" secondAttribute="width" id="mIB-Rh-IDq"/>
                                                 <constraint firstItem="DV1-2B-52a" firstAttribute="top" secondItem="ajD-Ht-ezv" secondAttribute="top" constant="20" id="nET-kH-P3h"/>
                                                 <constraint firstItem="SKq-DI-i2b" firstAttribute="top" secondItem="ZNU-Ss-kCE" secondAttribute="bottom" constant="20" id="zQ5-eH-ZyQ"/>

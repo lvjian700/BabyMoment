@@ -16,10 +16,13 @@ class BirthdayViewController: UIViewController {
     
     @IBAction func submit_birthday(sender: AnyObject) {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyy"
+        dateFormatter.dateFormat = "Y-M-d"
         
         birthday = dateFormatter.stringFromDate(birthday_picker.date)
-        print(birthday!)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(birthday, forKey: "baby_birthday")
+        
+        print(defaults.objectForKey("baby_birthday")!)
     }
     
     override func viewDidLoad() {

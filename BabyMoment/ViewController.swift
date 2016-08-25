@@ -10,6 +10,8 @@ import UIKit
 import Photos
 import HEXColor
 
+class TabBarVC: UITabBarController {}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!

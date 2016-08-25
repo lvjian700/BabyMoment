@@ -31,6 +31,8 @@
 		D0ADE0B41D6EEC7F0079AE3C /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0A21D6EEC7F0079AE3C /* IQToolbar.swift */; };
 		D0ADE0B51D6EEC7F0079AE3C /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0A31D6EEC7F0079AE3C /* IQUIView+IQKeyboardToolbar.swift */; };
 		D0ADE0B61D6EEC7F0079AE3C /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0ADE0A51D6EEC7F0079AE3C /* IQKeyboardManager.bundle */; };
+		D0ADE0B81D6F24C50079AE3C /* ChooseGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0B71D6F24C50079AE3C /* ChooseGenderViewController.swift */; };
+		D0ADE0BA1D6F25AA0079AE3C /* ChooseBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0B91D6F25AA0079AE3C /* ChooseBirthdayViewController.swift */; };
 		D0C90F381D6D489800D53A57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F371D6D489800D53A57 /* AppDelegate.swift */; };
 		D0C90F3A1D6D489800D53A57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F391D6D489800D53A57 /* ViewController.swift */; };
 		D0C90F3D1D6D489800D53A57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F3B1D6D489800D53A57 /* Main.storyboard */; };
@@ -80,6 +82,8 @@
 		D0ADE0A21D6EEC7F0079AE3C /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		D0ADE0A31D6EEC7F0079AE3C /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		D0ADE0A51D6EEC7F0079AE3C /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		D0ADE0B71D6F24C50079AE3C /* ChooseGenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseGenderViewController.swift; sourceTree = "<group>"; };
+		D0ADE0B91D6F25AA0079AE3C /* ChooseBirthdayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBirthdayViewController.swift; sourceTree = "<group>"; };
 		D0C90F341D6D489800D53A57 /* BabyMoment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyMoment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C90F371D6D489800D53A57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C90F391D6D489800D53A57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				D0C90F391D6D489800D53A57 /* ViewController.swift */,
+				D0ADE0B71D6F24C50079AE3C /* ChooseGenderViewController.swift */,
+				D0ADE0B91D6F25AA0079AE3C /* ChooseBirthdayViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -461,10 +467,12 @@
 				D0ADE0561D6E94A20079AE3C /* XLPhotoCell.swift in Sources */,
 				D0ADE0541D6E92200079AE3C /* XLPhotoViewController.swift in Sources */,
 				D0ADE0B11D6EEC7F0079AE3C /* IQBarButtonItem.swift in Sources */,
+				D0ADE0BA1D6F25AA0079AE3C /* ChooseBirthdayViewController.swift in Sources */,
 				D0ADE0AA1D6EEC7F0079AE3C /* IQUIViewController+Additions.swift in Sources */,
 				D0ADE0B51D6EEC7F0079AE3C /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				D0ADE0581D6E96F00079AE3C /* XLPhotoFooterView.swift in Sources */,
 				D0C90F661D6D7D9C00D53A57 /* XLAlbumViewController.swift in Sources */,
+				D0ADE0B81D6F24C50079AE3C /* ChooseGenderViewController.swift in Sources */,
 				D0ADE0B41D6EEC7F0079AE3C /* IQToolbar.swift in Sources */,
 				D0ADE0A61D6EEC7F0079AE3C /* IQNSArray+Sort.swift in Sources */,
 				D0ADE0AC1D6EEC7F0079AE3C /* IQKeyboardManagerConstants.swift in Sources */,

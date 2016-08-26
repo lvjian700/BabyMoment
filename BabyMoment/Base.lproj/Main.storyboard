@@ -474,6 +474,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dwc-hw-I0W"/>
+                    <connections>
+                        <outlet property="datePicker" destination="qEx-55-1YY" id="pU1-eG-nVZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVC-SE-x8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

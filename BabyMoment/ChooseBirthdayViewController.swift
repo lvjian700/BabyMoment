@@ -37,7 +37,7 @@ class ChooseBirthdayViewController: UIViewController {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(formatter.stringFromDate(datePicker.date), forKey: "Birthday")
+        userDefaults.setObject(formatter.stringFromDate(datePicker.date), forKey: "kBirthday")
         userDefaults.synchronize()
     }
 }

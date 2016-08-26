@@ -311,10 +311,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThP-kT-2tV">
-                                        <rect key="frame" x="0.0" y="44" width="240" height="91"/>
+                                        <rect key="frame" x="0.0" y="45" width="240" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YV-9I-1hq">
-                                                <rect key="frame" x="40" y="23" width="46" height="46"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YV-9I-1hq">
+                                                <rect key="frame" x="40" y="22" width="46" height="46"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9YV-9I-1hq" secondAttribute="height" multiplier="1:1" id="HOF-g1-rth"/>
                                                 </constraints>
@@ -323,8 +323,8 @@
                                                     <action selector="chooseGirl:" destination="aRJ-JF-7KU" eventType="touchUpInside" id="f07-vG-cow"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHn-lK-RTP">
-                                                <rect key="frame" x="154" y="23" width="46" height="46"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHn-lK-RTP">
+                                                <rect key="frame" x="154" y="22" width="46" height="46"/>
                                                 <state key="normal" backgroundImage="Boy"/>
                                                 <connections>
                                                     <action selector="chooseBoy:" destination="aRJ-JF-7KU" eventType="touchUpInside" id="0QI-g5-fDu"/>
@@ -348,7 +348,7 @@
                                     <constraint firstAttribute="width" secondItem="bh3-Xn-c02" secondAttribute="height" multiplier="16:9" id="26f-6e-IpV"/>
                                     <constraint firstAttribute="trailing" secondItem="zNW-5G-Zy1" secondAttribute="trailing" id="6hJ-Xl-vSz"/>
                                     <constraint firstItem="zNW-5G-Zy1" firstAttribute="top" secondItem="bh3-Xn-c02" secondAttribute="top" id="7pa-Yu-8Ce"/>
-                                    <constraint firstItem="ThP-kT-2tV" firstAttribute="top" secondItem="zNW-5G-Zy1" secondAttribute="bottom" id="CAq-xz-x3t"/>
+                                    <constraint firstItem="ThP-kT-2tV" firstAttribute="top" secondItem="zNW-5G-Zy1" secondAttribute="bottom" constant="1" id="CAq-xz-x3t"/>
                                     <constraint firstItem="zNW-5G-Zy1" firstAttribute="leading" secondItem="bh3-Xn-c02" secondAttribute="leading" id="KMn-29-kzT"/>
                                     <constraint firstAttribute="bottom" secondItem="ThP-kT-2tV" secondAttribute="bottom" id="P5h-gD-Dve"/>
                                     <constraint firstItem="ThP-kT-2tV" firstAttribute="leading" secondItem="bh3-Xn-c02" secondAttribute="leading" id="P8t-QO-WmG"/>
@@ -381,6 +381,7 @@
                     <navigationItem key="navigationItem" id="1Ft-nY-2la"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="header" destination="zNW-5G-Zy1" id="vMi-i7-kWx"/>
                         <segue destination="v97-Uo-4hv" kind="push" id="Nhi-Rs-4tK"/>
                     </connections>
                 </viewController>
@@ -440,7 +441,7 @@
                                         <rect key="frame" x="0.0" y="44" width="240" height="91"/>
                                         <subviews>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-55-1YY">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="91"/>
+                                                <rect key="frame" x="0.0" y="1" width="240" height="90"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="493823468.262299">
                                                     <!--2016-08-25 13:11:08 +0000-->
                                                 </date>
@@ -449,7 +450,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="qEx-55-1YY" secondAttribute="trailing" id="7qv-yf-Isn"/>
-                                            <constraint firstItem="qEx-55-1YY" firstAttribute="top" secondItem="Itz-1E-TdM" secondAttribute="top" id="P76-pn-MOn"/>
+                                            <constraint firstItem="qEx-55-1YY" firstAttribute="top" secondItem="Itz-1E-TdM" secondAttribute="top" constant="1" id="P76-pn-MOn"/>
                                             <constraint firstItem="qEx-55-1YY" firstAttribute="leading" secondItem="Itz-1E-TdM" secondAttribute="leading" id="Pyw-s8-Ado"/>
                                             <constraint firstAttribute="bottom" secondItem="qEx-55-1YY" secondAttribute="bottom" id="ki3-xF-qMR"/>
                                         </constraints>
@@ -494,6 +495,7 @@
                     <navigationItem key="navigationItem" id="dwc-hw-I0W"/>
                     <connections>
                         <outlet property="datePicker" destination="qEx-55-1YY" id="pU1-eG-nVZ"/>
+                        <outlet property="header" destination="wbU-fa-f9G" id="xok-Fl-c67"/>
                         <segue destination="dhu-LH-6wA" kind="push" id="HhJ-h1-jYh"/>
                     </connections>
                 </viewController>
@@ -550,9 +552,9 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sto-b1-okW">
-                                        <rect key="frame" x="0.0" y="44" width="240" height="91"/>
+                                        <rect key="frame" x="0.0" y="45" width="240" height="90"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-48-ncz">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-48-ncz">
                                                 <rect key="frame" x="30" y="31" width="180" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="dhZ-gT-9tz"/>
@@ -577,7 +579,7 @@
                                     <constraint firstItem="u0n-ld-ajJ" firstAttribute="top" secondItem="5bQ-nG-gR9" secondAttribute="top" id="ZfF-GJ-apT"/>
                                     <constraint firstItem="u0n-ld-ajJ" firstAttribute="leading" secondItem="5bQ-nG-gR9" secondAttribute="leading" id="bAM-eR-U22"/>
                                     <constraint firstAttribute="bottom" secondItem="sto-b1-okW" secondAttribute="bottom" id="bbK-m9-leQ"/>
-                                    <constraint firstItem="sto-b1-okW" firstAttribute="top" secondItem="u0n-ld-ajJ" secondAttribute="bottom" id="mQk-Al-sgO"/>
+                                    <constraint firstItem="sto-b1-okW" firstAttribute="top" secondItem="u0n-ld-ajJ" secondAttribute="bottom" constant="1" id="mQk-Al-sgO"/>
                                     <constraint firstAttribute="width" secondItem="5bQ-nG-gR9" secondAttribute="height" multiplier="16:9" id="ooK-2E-4Ap"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -608,6 +610,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="boM-uM-fEF"/>
                     <connections>
+                        <outlet property="header" destination="u0n-ld-ajJ" id="ZIt-ai-YS3"/>
                         <outlet property="nameTextField" destination="heZ-48-ncz" id="WTk-Sl-l8f"/>
                     </connections>
                 </viewController>

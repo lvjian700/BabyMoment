@@ -11,10 +11,15 @@ import UIKit
 class InputNameViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var header: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.becomeFirstResponder()
+        
+        header.layer.shadowOffset = CGSize(width: 0, height: 1)
+        header.layer.shadowRadius = 1
+        header.layer.shadowOpacity = 0.1
     }
     
     @IBAction func saveName(sender: AnyObject) {

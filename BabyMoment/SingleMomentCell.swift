@@ -23,8 +23,6 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         textField.delegate = self
-        time.layer.masksToBounds = true
-        time.layer.cornerRadius = 5.0
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

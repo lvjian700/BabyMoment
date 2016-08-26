@@ -33,6 +33,7 @@
 		D0ADE0B61D6EEC7F0079AE3C /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0ADE0A51D6EEC7F0079AE3C /* IQKeyboardManager.bundle */; };
 		D0ADE0B81D6F24C50079AE3C /* ChooseGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0B71D6F24C50079AE3C /* ChooseGenderViewController.swift */; };
 		D0ADE0BA1D6F25AA0079AE3C /* ChooseBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0B91D6F25AA0079AE3C /* ChooseBirthdayViewController.swift */; };
+		D0ADE0BC1D6FE1580079AE3C /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0BB1D6FE1580079AE3C /* InputNameViewController.swift */; };
 		D0C90F381D6D489800D53A57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F371D6D489800D53A57 /* AppDelegate.swift */; };
 		D0C90F3A1D6D489800D53A57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F391D6D489800D53A57 /* ViewController.swift */; };
 		D0C90F3D1D6D489800D53A57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F3B1D6D489800D53A57 /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 		D0ADE0A51D6EEC7F0079AE3C /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		D0ADE0B71D6F24C50079AE3C /* ChooseGenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseGenderViewController.swift; sourceTree = "<group>"; };
 		D0ADE0B91D6F25AA0079AE3C /* ChooseBirthdayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBirthdayViewController.swift; sourceTree = "<group>"; };
+		D0ADE0BB1D6FE1580079AE3C /* InputNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputNameViewController.swift; sourceTree = "<group>"; };
 		D0C90F341D6D489800D53A57 /* BabyMoment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyMoment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C90F371D6D489800D53A57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C90F391D6D489800D53A57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				D0C90F391D6D489800D53A57 /* ViewController.swift */,
 				D0ADE0B71D6F24C50079AE3C /* ChooseGenderViewController.swift */,
 				D0ADE0B91D6F25AA0079AE3C /* ChooseBirthdayViewController.swift */,
+				D0ADE0BB1D6FE1580079AE3C /* InputNameViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				D0ADE0AB1D6EEC7F0079AE3C /* IQUIWindow+Hierarchy.swift in Sources */,
 				D0ADE0AE1D6EEC7F0079AE3C /* IQKeyboardManager.swift in Sources */,
 				D0ADE0A81D6EEC7F0079AE3C /* IQUITextFieldView+Additions.swift in Sources */,
+				D0ADE0BC1D6FE1580079AE3C /* InputNameViewController.swift in Sources */,
 				D0ADE0B21D6EEC7F0079AE3C /* IQPreviousNextView.swift in Sources */,
 				D0ADE0B01D6EEC7F0079AE3C /* IQTextView.swift in Sources */,
 				D0ADE0A91D6EEC7F0079AE3C /* IQUIView+Hierarchy.swift in Sources */,

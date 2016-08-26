@@ -23,8 +23,9 @@ class ChooseBirthdayViewController: UIViewController {
     }
     
     private func showNextPage() {
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
-        app.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TabBarVC") as! TabBarVC
+        let inputNameVC =
+            UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("InputNameViewController") as! InputNameViewController
+        navigationController?.pushViewController(inputNameVC, animated: true)
     }
     
     private func setBirthday(date: NSDate) {

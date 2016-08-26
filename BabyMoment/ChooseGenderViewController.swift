@@ -17,15 +17,16 @@ class ChooseGenderViewController: UIViewController {
     
     
     @IBAction func chooseGirl(sender: AnyObject) {
-        let chooseDateVC =
-            UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ChooseBirthdayViewController") as! ChooseBirthdayViewController
-        navigationController?.pushViewController(chooseDateVC, animated: false)
+        showNextPage()
     }
     
     @IBAction func chooseBoy(sender: AnyObject) {
-        let chooseDateVC =
-            UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ChooseBirthdayViewController") as! ChooseBirthdayViewController
-        navigationController?.pushViewController(chooseDateVC, animated: false)
+        showNextPage()
     }
     
+    private func showNextPage() {
+        let chooseDateVC =
+            UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ChooseBirthdayViewController") as! ChooseBirthdayViewController
+        navigationController?.pushViewController(chooseDateVC, animated: true)
+    }
 }

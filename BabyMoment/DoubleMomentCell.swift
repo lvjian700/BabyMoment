@@ -31,6 +31,15 @@ class DoubleMomentCell: UITableViewCell, UITextFieldDelegate {
         return true
     }
     
+    func setDate(date: NSDate) {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "dd"
+        day.text = formatter.stringFromDate(date)
+        
+        formatter.dateFormat = "yyyy.MM"
+        yearMonth.text = formatter.stringFromDate(date)
+    }
+    
     func setUploadedAt(date: NSDate) {
         let timeAgoText:String = date.timeAgoSinceNow()
         timeAgo.text = timeAgoText

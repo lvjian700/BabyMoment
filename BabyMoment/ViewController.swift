@@ -54,6 +54,7 @@ extension ViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier("DoubleMomentCell", forIndexPath: indexPath) as! DoubleMomentCell
             cell.setImageFromLocal(cell.heroImage, asset: cellModel.asset[0])
             cell.setImageFromLocal(cell.secondImage, asset: cellModel.asset[1])
+            cell.setDate(cellModel.photoTakenDate!)
             cell.setUploadedAt(cellModel.currentDate!)
             
             return cell
@@ -61,7 +62,7 @@ extension ViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath) as! SingleMomentCell
             cell.setImageFromLocal(cell.heroImage, asset: cellModel.asset[0])
             cell.setUploadedAt(cellModel.currentDate!)
-            cell.setDate(cellModel.currentDate!)//set cal date
+            cell.setDate(cellModel.photoTakenDate!)//set cal date
             return cell
         }
     }
@@ -70,7 +71,11 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: XLPhotoDelegate {
     func didSelectPhotos(selectedAsset: [PHAsset]) {
         if selectedAsset.count > 0 {
-            let cellModel = MomentCellModel(asset: selectedAsset)
+            var cellModel = MomentCellModel(asset: selectedAsset)
+            let asset = selectedAsset[0]
+            if let createDate = asset.creationDate {
+                cellModel.photoTakenDate = createDate
+            }
             cellModels.append(cellModel)
             tableView.reloadData()
         }

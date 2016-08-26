@@ -13,9 +13,11 @@ struct MomentCellModel {
     var asset: [PHAsset]
     var comments: String?
     var currentDate: NSDate?
+    var photoTakenDate: NSDate?
     
     init(asset: [PHAsset]) {
         self.asset = asset
         self.currentDate = NSDate()
+        self.photoTakenDate = currentDate
     }
 }

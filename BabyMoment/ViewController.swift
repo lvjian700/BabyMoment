@@ -9,6 +9,7 @@
 import UIKit
 import Photos
 import HEXColor
+import DateTools
 
 class TabBarVC: UITabBarController {}
 
@@ -53,18 +54,14 @@ extension ViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier("DoubleMomentCell", forIndexPath: indexPath) as! DoubleMomentCell
             cell.setImageFromLocal(cell.heroImage, asset: cellModel.asset[0])
             cell.setImageFromLocal(cell.secondImage, asset: cellModel.asset[1])
+            cell.setUploadedAt(cellModel.currentDate!)
             
-            cell.saveAction = { content in
-                cell.comments.text = content
-            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath) as! SingleMomentCell
             cell.setImageFromLocal(cell.heroImage, asset: cellModel.asset[0])
-            cell.setDate(cellModel.currentDate!)
-            cell.saveAction = { content in
-                cell.comments.text = content
-            }
+            cell.setUploadedAt(cellModel.currentDate!)
+            cell.setDate(cellModel.currentDate!)//set cal date
             return cell
         }
     }

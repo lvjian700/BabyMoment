@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="344"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eIx-EJ-4fh" id="jyu-57-wRp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="343.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="344"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anT-Ip-bf6">
@@ -106,11 +106,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="comments" destination="FZJ-rq-Gng" id="6zS-8i-Pox"/>
                                             <outlet property="day" destination="e89-nS-XGF" id="PCp-tg-hFH"/>
                                             <outlet property="heroImage" destination="ZN8-Ss-tDd" id="WDS-xi-JSB"/>
                                             <outlet property="textField" destination="k0u-mH-HWz" id="jIa-zm-yZA"/>
                                             <outlet property="time" destination="uT7-13-eav" id="Jmj-9h-hcL"/>
+                                            <outlet property="timeAgo" destination="FZJ-rq-Gng" id="wOZ-Of-tdZ"/>
                                             <outlet property="yearMonth" destination="TKx-GB-gtY" id="WDs-18-tRh"/>
                                         </connections>
                                     </tableViewCell>
@@ -118,7 +118,7 @@
                                         <rect key="frame" x="0.0" y="372" width="375" height="344"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JuK-2r-VwN" id="ajD-Ht-ezv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="343.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="344"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DV1-2B-52a">
@@ -201,12 +201,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="comments" destination="SKq-DI-i2b" id="H3H-kU-4k3"/>
                                             <outlet property="day" destination="SY4-lQ-iqu" id="45k-cF-XbQ"/>
                                             <outlet property="heroImage" destination="ZNU-Ss-kCE" id="NTX-0B-Lrz"/>
                                             <outlet property="secondImage" destination="p1p-Gp-L34" id="4vU-4y-j1p"/>
                                             <outlet property="textField" destination="s6C-aS-R5y" id="ikQ-LI-gQI"/>
                                             <outlet property="time" destination="qGO-pP-htI" id="Mar-E2-kSg"/>
+                                            <outlet property="timeAgo" destination="SKq-DI-i2b" id="GG3-HS-vF3"/>
                                             <outlet property="yearMonth" destination="2tw-3L-QrB" id="Cea-XG-hzr"/>
                                         </connections>
                                     </tableViewCell>

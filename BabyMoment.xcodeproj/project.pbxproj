@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0DD0F41D70050100E63FF2 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0DD0F31D70050100E63FF2 /* DateTools.framework */; };
 		D0ADE0541D6E92200079AE3C /* XLPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */; };
 		D0ADE0561D6E94A20079AE3C /* XLPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0551D6E94A20079AE3C /* XLPhotoCell.swift */; };
 		D0ADE0581D6E96F00079AE3C /* XLPhotoFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0571D6E96F00079AE3C /* XLPhotoFooterView.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F0DD0F31D70050100E63FF2 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
 		D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoViewController.swift; sourceTree = "<group>"; };
 		D0ADE0551D6E94A20079AE3C /* XLPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoCell.swift; sourceTree = "<group>"; };
 		D0ADE0571D6E96F00079AE3C /* XLPhotoFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoFooterView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0DD0F41D70050100E63FF2 /* DateTools.framework in Frameworks */,
 				D0ADE0611D6EDEAD0079AE3C /* HEXColor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +136,7 @@
 		D0ADE0641D6EDF100079AE3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5F0DD0F31D70050100E63FF2 /* DateTools.framework */,
 				D0ADE0601D6EDEAD0079AE3C /* HEXColor.framework */,
 			);
 			name = Frameworks;
@@ -391,6 +395,7 @@
 				TargetAttributes = {
 					D0C90F331D6D489800D53A57 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = C85KQG8PYQ;
 					};
 					D0C90F471D6D489900D53A57 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -448,6 +453,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/HEXColor.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DateTools.framework",
 			);
 			outputPaths = (
 			);
@@ -621,6 +627,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -628,8 +636,9 @@
 				INFOPLIST_FILE = BabyMoment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kotlinchina.BabyMoment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tw.dev.BabyMoment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -638,6 +647,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -645,8 +656,9 @@
 				INFOPLIST_FILE = BabyMoment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kotlinchina.BabyMoment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tw.dev.BabyMoment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

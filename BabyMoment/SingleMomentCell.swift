@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import DateTools
 
 class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     
@@ -15,7 +16,7 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var yearMonth: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var heroImage: UIImageView!
-    @IBOutlet weak var comments: UILabel!
+    @IBOutlet weak var timeAgo: UILabel!
     @IBOutlet weak var textField: UITextField!
     
     var saveAction: ((content: String) -> Void)?
@@ -38,6 +39,11 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
         
         formatter.dateFormat = "yyyy.MM"
         yearMonth.text = formatter.stringFromDate(date)
+    }
+    
+    func setUploadedAt(date: NSDate) {
+        let timeAgoText:String = date.timeAgoSinceNow()
+        timeAgo.text = timeAgoText
     }
 }
 

@@ -15,7 +15,7 @@ class DoubleMomentCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var heroImage: UIImageView!
     @IBOutlet weak var secondImage: UIImageView!
-    @IBOutlet weak var comments: UILabel!
+    @IBOutlet weak var timeAgo: UILabel!
     @IBOutlet weak var textField: UITextField!
     
     var saveAction: ((content: String) -> Void)?
@@ -29,5 +29,10 @@ class DoubleMomentCell: UITableViewCell, UITextFieldDelegate {
         saveAction?(content: textField.text ?? "")
         textField.resignFirstResponder()
         return true
+    }
+    
+    func setUploadedAt(date: NSDate) {
+        let timeAgoText:String = date.timeAgoSinceNow()
+        timeAgo.text = timeAgoText
     }
 }

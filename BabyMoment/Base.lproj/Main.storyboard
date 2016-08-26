@@ -294,17 +294,27 @@
                                 <rect key="frame" x="40" y="216" width="240" height="135"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNW-5G-Zy1">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宝宝性别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2Q-Bi-HE8">
+                                                <rect key="frame" x="80" y="8" width="80" height="28"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.96470588239999999" green="0.86274509799999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="IPQ-UM-oto"/>
+                                            <constraint firstItem="H2Q-Bi-HE8" firstAttribute="centerY" secondItem="zNW-5G-Zy1" secondAttribute="centerY" id="5hJ-el-O2W"/>
+                                            <constraint firstItem="H2Q-Bi-HE8" firstAttribute="centerX" secondItem="zNW-5G-Zy1" secondAttribute="centerX" id="869-3K-Hbb"/>
+                                            <constraint firstAttribute="height" constant="44" id="IPQ-UM-oto"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThP-kT-2tV">
-                                        <rect key="frame" x="0.0" y="32" width="240" height="103"/>
+                                        <rect key="frame" x="0.0" y="44" width="240" height="91"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YV-9I-1hq">
-                                                <rect key="frame" x="40" y="26" width="52" height="52"/>
+                                                <rect key="frame" x="40" y="23" width="46" height="46"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9YV-9I-1hq" secondAttribute="height" multiplier="1:1" id="HOF-g1-rth"/>
                                                 </constraints>
@@ -313,8 +323,8 @@
                                                     <action selector="chooseGirl:" destination="aRJ-JF-7KU" eventType="touchUpInside" id="f07-vG-cow"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHn-lK-RTP">
-                                                <rect key="frame" x="148" y="27" width="52" height="51"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHn-lK-RTP">
+                                                <rect key="frame" x="154" y="23" width="46" height="46"/>
                                                 <state key="normal" backgroundImage="Boy"/>
                                                 <connections>
                                                     <action selector="chooseBoy:" destination="aRJ-JF-7KU" eventType="touchUpInside" id="0QI-g5-fDu"/>
@@ -347,7 +357,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -397,10 +407,10 @@
                                 <rect key="frame" x="40" y="216" width="240" height="135"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbU-fa-f9G">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6h-hN-ea5">
-                                                <rect key="frame" x="212" y="6" width="20" height="20"/>
+                                                <rect key="frame" x="209" y="12" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="YhK-Oc-lAy"/>
                                                     <constraint firstAttribute="width" constant="20" id="rzF-jX-AR3"/>
@@ -410,19 +420,27 @@
                                                     <action selector="chooseDate:" destination="v97-Uo-4hv" eventType="touchUpInside" id="2NW-c7-fez"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出生日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZV-Ay-aAM">
+                                                <rect key="frame" x="80" y="8" width="80" height="28"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96470588239999999" green="0.86274509799999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="z6h-hN-ea5" secondAttribute="trailing" constant="8" id="JTb-aX-Nt7"/>
-                                            <constraint firstAttribute="height" constant="32" id="dcN-bD-gZY"/>
+                                            <constraint firstAttribute="trailing" secondItem="z6h-hN-ea5" secondAttribute="trailing" constant="11" id="JTb-aX-Nt7"/>
+                                            <constraint firstAttribute="height" constant="44" id="dcN-bD-gZY"/>
+                                            <constraint firstItem="rZV-Ay-aAM" firstAttribute="centerX" secondItem="wbU-fa-f9G" secondAttribute="centerX" id="fhl-AP-bco"/>
                                             <constraint firstItem="z6h-hN-ea5" firstAttribute="centerY" secondItem="wbU-fa-f9G" secondAttribute="centerY" id="j16-qY-dRG"/>
+                                            <constraint firstItem="rZV-Ay-aAM" firstAttribute="centerY" secondItem="wbU-fa-f9G" secondAttribute="centerY" id="yRg-RO-Sxb"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Itz-1E-TdM">
-                                        <rect key="frame" x="0.0" y="32" width="240" height="103"/>
+                                        <rect key="frame" x="0.0" y="44" width="240" height="91"/>
                                         <subviews>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-55-1YY">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="103"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="91"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="493823468.262299">
                                                     <!--2016-08-25 13:11:08 +0000-->
                                                 </date>
@@ -451,7 +469,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -502,10 +520,10 @@
                                 <rect key="frame" x="40" y="217" width="240" height="135"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0n-ld-ajJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKn-VP-6vv">
-                                                <rect key="frame" x="212" y="6" width="20" height="20"/>
+                                                <rect key="frame" x="209" y="12" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="qTM-7D-CGr"/>
                                                     <constraint firstAttribute="width" constant="20" id="xUU-5E-wtO"/>
@@ -515,19 +533,27 @@
                                                     <action selector="saveName:" destination="dhu-LH-6wA" eventType="touchUpInside" id="h79-Fb-XVb"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宝宝姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acM-kE-8SK">
+                                                <rect key="frame" x="80" y="8" width="80" height="28"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96470588239999999" green="0.86274509799999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="SKn-VP-6vv" secondAttribute="trailing" constant="8" id="FZE-T6-PJ9"/>
-                                            <constraint firstAttribute="height" constant="32" id="SYb-yo-9Rl"/>
+                                            <constraint firstAttribute="trailing" secondItem="SKn-VP-6vv" secondAttribute="trailing" constant="11" id="FZE-T6-PJ9"/>
+                                            <constraint firstItem="acM-kE-8SK" firstAttribute="centerY" secondItem="u0n-ld-ajJ" secondAttribute="centerY" id="JE1-Rd-T2s"/>
+                                            <constraint firstAttribute="height" constant="44" id="SYb-yo-9Rl"/>
                                             <constraint firstItem="SKn-VP-6vv" firstAttribute="centerY" secondItem="u0n-ld-ajJ" secondAttribute="centerY" id="aAX-ei-Gzm"/>
+                                            <constraint firstItem="acM-kE-8SK" firstAttribute="centerX" secondItem="u0n-ld-ajJ" secondAttribute="centerX" id="lSB-Vm-CGu"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sto-b1-okW">
-                                        <rect key="frame" x="0.0" y="32" width="240" height="103"/>
+                                        <rect key="frame" x="0.0" y="44" width="240" height="91"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-48-ncz">
-                                                <rect key="frame" x="30" y="37" width="180" height="30"/>
+                                                <rect key="frame" x="30" y="31" width="180" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="dhZ-gT-9tz"/>
                                                 </constraints>
@@ -557,7 +583,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>

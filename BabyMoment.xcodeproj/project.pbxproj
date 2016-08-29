@@ -11,6 +11,7 @@
 		5F0DD0F71D700A0900E63FF2 /* BirthdayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */; };
 		5F0DD0F91D700A9C00E63FF2 /* BirthdayHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DD0F81D700A9C00E63FF2 /* BirthdayHelperTest.swift */; };
 		5F0DD0FB1D700D5000E63FF2 /* BirthdayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */; };
+		937F2F0D1D747FBE00232E52 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 937F2F0C1D747FBE00232E52 /* DateTools.bundle */; };
 		D0ADE0541D6E92200079AE3C /* XLPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */; };
 		D0ADE0561D6E94A20079AE3C /* XLPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0551D6E94A20079AE3C /* XLPhotoCell.swift */; };
 		D0ADE0581D6E96F00079AE3C /* XLPhotoFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0571D6E96F00079AE3C /* XLPhotoFooterView.swift */; };
@@ -64,6 +65,7 @@
 		5F0DD0F31D70050100E63FF2 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
 		5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayHelper.swift; sourceTree = "<group>"; };
 		5F0DD0F81D700A9C00E63FF2 /* BirthdayHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayHelperTest.swift; sourceTree = "<group>"; };
+		937F2F0C1D747FBE00232E52 /* DateTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = Carthage/Checkouts/DateTools/DateTools/DateTools.bundle; sourceTree = "<group>"; };
 		D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoViewController.swift; sourceTree = "<group>"; };
 		D0ADE0551D6E94A20079AE3C /* XLPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoCell.swift; sourceTree = "<group>"; };
 		D0ADE0571D6E96F00079AE3C /* XLPhotoFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoFooterView.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		D0C90F2B1D6D489800D53A57 = {
 			isa = PBXGroup;
 			children = (
+				937F2F0C1D747FBE00232E52 /* DateTools.bundle */,
 				D0ADE0641D6EDF100079AE3C /* Frameworks */,
 				D0C90F361D6D489800D53A57 /* BabyMoment */,
 				D0C90F4B1D6D489900D53A57 /* BabyMomentTests */,
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C90F421D6D489800D53A57 /* LaunchScreen.storyboard in Resources */,
+				937F2F0D1D747FBE00232E52 /* DateTools.bundle in Resources */,
 				D0ADE05F1D6ED76F0079AE3C /* Images.xcassets in Resources */,
 				D0ADE0B61D6EEC7F0079AE3C /* IQKeyboardManager.bundle in Resources */,
 				D0C90F601D6D778700D53A57 /* XLPhotoManager.storyboard in Resources */,

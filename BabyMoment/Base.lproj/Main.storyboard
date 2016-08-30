@@ -468,20 +468,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sto-b1-okW">
                                         <rect key="frame" x="0.0" y="45" width="240" height="90"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-48-ncz">
-                                                <rect key="frame" x="30" y="30" width="180" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="dhZ-gT-9tz"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="宝宝名字" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-48-ncz">
+                                                <rect key="frame" x="20" y="0.0" width="200" height="90"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="heZ-48-ncz" firstAttribute="centerY" secondItem="sto-b1-okW" secondAttribute="centerY" id="gOi-7Z-u2i"/>
-                                            <constraint firstItem="heZ-48-ncz" firstAttribute="centerX" secondItem="sto-b1-okW" secondAttribute="centerX" id="kSf-6W-9yq"/>
-                                            <constraint firstItem="heZ-48-ncz" firstAttribute="width" secondItem="sto-b1-okW" secondAttribute="width" multiplier="3:4" id="kVp-qq-wWx"/>
+                                            <constraint firstAttribute="bottom" secondItem="heZ-48-ncz" secondAttribute="bottom" id="09U-zL-1JG"/>
+                                            <constraint firstItem="heZ-48-ncz" firstAttribute="top" secondItem="sto-b1-okW" secondAttribute="top" id="G3D-7C-D53"/>
+                                            <constraint firstItem="heZ-48-ncz" firstAttribute="leading" secondItem="sto-b1-okW" secondAttribute="leading" constant="20" id="fZX-kj-uTJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="heZ-48-ncz" secondAttribute="trailing" constant="20" id="hw3-y4-moc"/>
                                         </constraints>
                                     </view>
                                 </subviews>

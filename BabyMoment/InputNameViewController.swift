@@ -15,12 +15,15 @@ class InputNameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextField.becomeFirstResponder()
         nameTextField.delegate = self
         
         header.layer.shadowOffset = CGSize(width: 0, height: 1)
         header.layer.shadowRadius = 1
         header.layer.shadowOpacity = 0.1
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        nameTextField.becomeFirstResponder()
     }
     
     @IBAction func saveName(sender: AnyObject) {

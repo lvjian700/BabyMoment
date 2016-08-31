@@ -11,7 +11,11 @@ import Photos
 import HEXColor
 import DateTools
 
-class TabBarVC: UITabBarController {}
+class TabBarVC: UITabBarController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
 
 class ViewController: UIViewController {
 

@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="344"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eIx-EJ-4fh" id="jyu-57-wRp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="344"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="343.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anT-Ip-bf6">
@@ -149,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="-470.5" y="2077"/>
         </scene>
-        <!--View Controller-->
+        <!--宝宝-->
         <scene sceneID="zfc-QH-2NY">
             <objects>
                 <viewController id="Rk3-ax-oqv" sceneMemberID="viewController">
@@ -162,35 +162,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="baby-profile" id="xh6-6J-pYz">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="宝宝" image="baby-profile" id="xh6-6J-pYz"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybE-nN-RVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="72.5" y="1158.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="26S-PP-dKz">
-            <objects>
-                <viewController id="fxC-qf-Kc8" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XTK-5A-Q2M"/>
-                        <viewControllerLayoutGuide type="bottom" id="1xG-sP-dpt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jwr-eA-4Do">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="add-photo" id="070-os-yDo">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r6g-Dr-kIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="371" y="749"/>
         </scene>
         <!--Choose Gender View Controller-->
         <scene sceneID="0FO-uX-1hF">
@@ -545,7 +522,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="M2f-pP-VqU" kind="relationship" relationship="viewControllers" id="c05-Qx-rwX"/>
-                        <segue destination="fxC-qf-Kc8" kind="relationship" relationship="viewControllers" id="5KG-1z-w0h"/>
                         <segue destination="Rk3-ax-oqv" kind="relationship" relationship="viewControllers" id="ViS-KD-UcJ"/>
                     </connections>
                 </tabBarController>
@@ -553,13 +529,11 @@
             </objects>
             <point key="canvasLocation" x="-100" y="159.51333333333332"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--时刻-->
         <scene sceneID="os0-pg-t4u">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M2f-pP-VqU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="timeline" id="0D8-v3-4t5">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="时刻" image="timeline" id="0D8-v3-4t5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hcu-a2-07r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -596,7 +570,6 @@
     <resources>
         <image name="Boy" width="90" height="90"/>
         <image name="Girl" width="90" height="90"/>
-        <image name="add-photo" width="33" height="33"/>
         <image name="baby" width="320" height="215"/>
         <image name="baby-profile" width="38" height="33"/>
         <image name="background" width="1125" height="2001"/>

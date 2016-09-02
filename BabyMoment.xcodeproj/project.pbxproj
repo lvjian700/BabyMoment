@@ -10,7 +10,6 @@
 		5F0DD0F41D70050100E63FF2 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0DD0F31D70050100E63FF2 /* DateTools.framework */; };
 		5F0DD0F71D700A0900E63FF2 /* BirthdayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */; };
 		5F0DD0F91D700A9C00E63FF2 /* BirthdayHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DD0F81D700A9C00E63FF2 /* BirthdayHelperTest.swift */; };
-		5F0DD0FB1D700D5000E63FF2 /* BirthdayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */; };
 		5F66452D1D78730500E25CB1 /* BabyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F66452C1D78730500E25CB1 /* BabyProfile.swift */; };
 		5F6645301D78F32800E25CB1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F66452E1D78F2E700E25CB1 /* Realm.framework */; };
 		5F6645321D78F32800E25CB1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6645311D78F32800E25CB1 /* RealmSwift.framework */; };
@@ -536,7 +535,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F0DD0F91D700A9C00E63FF2 /* BirthdayHelperTest.swift in Sources */,
-				5F0DD0FB1D700D5000E63FF2 /* BirthdayHelper.swift in Sources */,
 				D0C90F4D1D6D489900D53A57 /* BabyMomentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,7 +665,7 @@
 				);
 				INFOPLIST_FILE = BabyMoment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tw.dev.BabyMoment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -687,7 +685,7 @@
 				);
 				INFOPLIST_FILE = BabyMoment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tw.dev.BabyMoment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

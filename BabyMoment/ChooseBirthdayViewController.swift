@@ -34,10 +34,6 @@ class ChooseBirthdayViewController: UIViewController {
     }
     
     private func setBirthday(date: NSDate) {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(formatter.stringFromDate(datePicker.date), forKey: "kBirthday")
-        userDefaults.synchronize()
+        BabyProfile.saveBirthday(datePicker.date)
     }
 }

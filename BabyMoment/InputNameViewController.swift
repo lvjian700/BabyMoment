@@ -37,9 +37,7 @@ class InputNameViewController: UIViewController {
     }
     
     private func saveName(name: String) {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(name, forKey: "Name")
-        userDefaults.synchronize()
+        BabyProfile.saveName(name)
     }
 }
 
@@ -48,5 +46,10 @@ extension InputNameViewController: UITextFieldDelegate {
         saveName(nameTextField.text!)
         showNextPage()
         return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        saveName(nameTextField.text!)
+        showNextPage()
     }
 }

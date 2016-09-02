@@ -8,10 +8,6 @@
 
 import UIKit
 
-enum Gender: Int {
-    case Girl, Boy
-}
-
 class ChooseGenderViewController: UIViewController {
 
     @IBOutlet weak var header: UIView!
@@ -42,8 +38,6 @@ class ChooseGenderViewController: UIViewController {
     }
     
     private func setGender(gender: Gender) {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setInteger(gender.rawValue, forKey: "Gender")
-        userDefaults.synchronize()
+        BabyProfile.saveGender(gender)
     }
 }

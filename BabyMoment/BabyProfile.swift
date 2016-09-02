@@ -9,11 +9,35 @@
 import Foundation
 import RealmSwift
 
+enum Gender: Int {
+    case Girl, Boy
+}
+
 class BabyProfile: Object {
+    dynamic var name = ""
+    dynamic var gender = ""
+    dynamic var birthday: NSDate?
+
+    class func load_from_setting() -> BabyProfile? {
+        return nil
+    }
     
-// Specify properties to ignore (Realm won't persist these)
+    class func saveName(name: String) {
+        NSUserDefaults.standardUserDefaults().setObject(name, forKey: "kBabyName")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
     
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
+    class func saveGender(gender: Gender) {
+        NSUserDefaults.standardUserDefaults().setObject(gender.rawValue, forKey: "kBabyGender")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    class func saveBirthday(birthday: NSDate) {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let birthday:String = formatter.stringFromDate(birthday)
+        
+        NSUserDefaults.standardUserDefaults().setObject(birthday, forKey: "kBabyBirthday")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
 }

@@ -38,6 +38,7 @@ class InputNameViewController: UIViewController {
     
     private func saveName(name: String) {
         BabyProfile.saveName(name)
+        BabyProfile.initWithUserDefault().save()
     }
 }
 

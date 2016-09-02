@@ -15,11 +15,18 @@ enum Gender: Int {
 
 class BabyProfile: Object {
     dynamic var name = ""
-    dynamic var gender = ""
+    dynamic var gender = Gender.Girl.rawValue
     dynamic var birthday: NSDate?
-
-    class func load_from_setting() -> BabyProfile? {
-        return nil
+    
+    class func initWithUserDefault() -> BabyProfile {
+        let name:String = NSUserDefaults.standardUserDefaults().stringForKey("kBabyName")!
+        let gender:Int = NSUserDefaults.standardUserDefaults().integerForKey("kBabyGender")
+        
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let birthdayDate:NSDate = formatter.dateFromString(NSUserDefaults.standardUserDefaults().stringForKey("kBabyBirthday")!)!
+        
+        return BabyProfile(value: ["name": name, "gender": gender, "birthday": birthdayDate])
     }
     
     class func saveName(name: String) {
@@ -39,5 +46,20 @@ class BabyProfile: Object {
         
         NSUserDefaults.standardUserDefaults().setObject(birthday, forKey: "kBabyBirthday")
         NSUserDefaults.standardUserDefaults().synchronize()
+    }
+}
+
+extension BabyProfile {
+    
+    class func currentProfile() -> BabyProfile? {
+        let realm = try! Realm()
+        return realm.objects(BabyProfile.self).first
+    }
+    
+    func save() {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(self)
+        }
     }
 }

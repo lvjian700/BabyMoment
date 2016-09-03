@@ -14,11 +14,11 @@
 		5F6645301D78F32800E25CB1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F66452E1D78F2E700E25CB1 /* Realm.framework */; };
 		5F6645321D78F32800E25CB1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6645311D78F32800E25CB1 /* RealmSwift.framework */; };
 		5FA472001D793715008CA63C /* BabyProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA471FF1D793715008CA63C /* BabyProfileTests.swift */; };
+		5FB288A91D7B107700DF386A /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB288A81D7B107700DF386A /* Moment.swift */; };
 		937F2F0D1D747FBE00232E52 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 937F2F0C1D747FBE00232E52 /* DateTools.bundle */; };
 		D0ADE0541D6E92200079AE3C /* XLPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */; };
 		D0ADE0561D6E94A20079AE3C /* XLPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0551D6E94A20079AE3C /* XLPhotoCell.swift */; };
 		D0ADE0581D6E96F00079AE3C /* XLPhotoFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0571D6E96F00079AE3C /* XLPhotoFooterView.swift */; };
-		D0ADE05D1D6ED6220079AE3C /* MomentCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE05C1D6ED6220079AE3C /* MomentCellModel.swift */; };
 		D0ADE05F1D6ED76F0079AE3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ADE05E1D6ED76F0079AE3C /* Images.xcassets */; };
 		D0ADE0611D6EDEAD0079AE3C /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0ADE0601D6EDEAD0079AE3C /* HEXColor.framework */; };
 		D0ADE0A61D6EEC7F0079AE3C /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0901D6EEC7F0079AE3C /* IQNSArray+Sort.swift */; };
@@ -72,11 +72,11 @@
 		5F66452E1D78F2E700E25CB1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		5F6645311D78F32800E25CB1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		5FA471FF1D793715008CA63C /* BabyProfileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyProfileTests.swift; sourceTree = "<group>"; };
+		5FB288A81D7B107700DF386A /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
 		937F2F0C1D747FBE00232E52 /* DateTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = Carthage/Checkouts/DateTools/DateTools/DateTools.bundle; sourceTree = "<group>"; };
 		D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoViewController.swift; sourceTree = "<group>"; };
 		D0ADE0551D6E94A20079AE3C /* XLPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoCell.swift; sourceTree = "<group>"; };
 		D0ADE0571D6E96F00079AE3C /* XLPhotoFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoFooterView.swift; sourceTree = "<group>"; };
-		D0ADE05C1D6ED6220079AE3C /* MomentCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentCellModel.swift; sourceTree = "<group>"; };
 		D0ADE05E1D6ED76F0079AE3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0ADE0601D6EDEAD0079AE3C /* HEXColor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HEXColor.framework; path = Carthage/Build/iOS/HEXColor.framework; sourceTree = "<group>"; };
 		D0ADE0901D6EEC7F0079AE3C /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 		D0ADE05B1D6ED5F80079AE3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D0ADE05C1D6ED6220079AE3C /* MomentCellModel.swift */,
 				5F66452C1D78730500E25CB1 /* BabyProfile.swift */,
+				5FB288A81D7B107700DF386A /* Moment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -507,7 +507,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0ADE05D1D6ED6220079AE3C /* MomentCellModel.swift in Sources */,
 				D0ADE0AF1D6EEC7F0079AE3C /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				D0C90F3A1D6D489800D53A57 /* ViewController.swift in Sources */,
 				D0C90F641D6D7D5E00D53A57 /* XLAlbumCell.swift in Sources */,
@@ -530,6 +529,7 @@
 				D0ADE0AB1D6EEC7F0079AE3C /* IQUIWindow+Hierarchy.swift in Sources */,
 				D0ADE0AE1D6EEC7F0079AE3C /* IQKeyboardManager.swift in Sources */,
 				D0ADE0A81D6EEC7F0079AE3C /* IQUITextFieldView+Additions.swift in Sources */,
+				5FB288A91D7B107700DF386A /* Moment.swift in Sources */,
 				D0ADE0BC1D6FE1580079AE3C /* InputNameViewController.swift in Sources */,
 				D0ADE0B21D6EEC7F0079AE3C /* IQPreviousNextView.swift in Sources */,
 				D0ADE0B01D6EEC7F0079AE3C /* IQTextView.swift in Sources */,

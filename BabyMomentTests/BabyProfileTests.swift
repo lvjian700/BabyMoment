@@ -7,9 +7,6 @@ class BabyProfileTests: XCTestCase {
     
     override func setUp() {
         NSUserDefaults.resetStandardUserDefaults()
-    }
-    
-    override func tearDown() {
         let realm = try! Realm()
         try! realm.write {
             realm.deleteAll()

@@ -1,11 +1,3 @@
-//
-//  Moment.swift
-//  BabyMoment
-//
-//  Created by twcn  on 9/3/16.
-//  Copyright © 2016 kotlinchina. All rights reserved.
-//
-
 import Foundation
 import RealmSwift
 

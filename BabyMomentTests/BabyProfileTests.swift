@@ -2,7 +2,6 @@ import XCTest
 import RealmSwift
 @testable import BabyMoment
 
-
 class BabyProfileTests: XCTestCase {
     
     override func setUp() {

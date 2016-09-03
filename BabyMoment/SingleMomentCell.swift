@@ -40,12 +40,7 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
         formatter.dateFormat = "yyyy.MM"
         yearMonth.text = formatter.stringFromDate(date)
         
-        let birday:String = NSUserDefaults.standardUserDefaults()
-            .stringForKey("kBirthday")!
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let birdayDate:NSDate = dateFormatter.dateFromString(birday)!
-        let oldText:String = date.howOld(birdayDate)
+        let oldText:String = date.howOld((BabyProfile.currentProfile()?.birthday)!)
         time.text = oldText;
     }
     

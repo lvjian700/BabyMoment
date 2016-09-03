@@ -1,11 +1,3 @@
-//
-//  InputNameViewController.swift
-//  BabyMoment
-//
-//  Created by Xueliang Zhu on 8/26/16.
-//  Copyright © 2016 kotlinchina. All rights reserved.
-//
-
 import UIKit
 
 class InputNameViewController: UIViewController {

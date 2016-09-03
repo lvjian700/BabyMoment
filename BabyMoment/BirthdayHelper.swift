@@ -1,11 +1,3 @@
-//
-//  BirthdayHelper.swift
-//  BabyMoment
-//
-//  Created by twcn  on 8/26/16.
-//  Copyright © 2016 kotlinchina. All rights reserved.
-//
-
 import Foundation
 
 extension NSDate {

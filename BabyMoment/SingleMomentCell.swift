@@ -1,11 +1,3 @@
-//
-//  MomentCell.swift
-//  BabyMoment
-//
-//  Created by Xueliang Zhu on 8/24/16.
-//  Copyright © 2016 kotlinchina. All rights reserved.
-//
-
 import UIKit
 import Photos
 import DateTools
@@ -40,12 +32,7 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
         formatter.dateFormat = "yyyy.MM"
         yearMonth.text = formatter.stringFromDate(date)
         
-        let birday:String = NSUserDefaults.standardUserDefaults()
-            .stringForKey("kBirthday")!
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let birdayDate:NSDate = dateFormatter.dateFromString(birday)!
-        let oldText:String = date.howOld(birdayDate)
+        let oldText:String = date.howOld((BabyProfile.currentProfile()?.birthday)!)
         time.text = oldText;
     }
     
@@ -56,7 +43,10 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
 }
 
 extension UITableViewCell {
-    func setImageFromLocal(imageView: UIImageView, asset: PHAsset) {
+    func setImageFromLocal(imageView: UIImageView, assetLocationId: String) {
+        let result: PHFetchResult = PHAsset.fetchAssetsWithLocalIdentifiers([assetLocationId], options: nil)
+        let asset:PHAsset = result.firstObject as! PHAsset
+        
         let request = PHImageRequestOptions()
         request.resizeMode = .Exact
         request.deliveryMode = .HighQualityFormat

@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  BabyMoment
-//
-//  Created by Xueliang Zhu on 8/24/16.
-//  Copyright © 2016 kotlinchina. All rights reserved.
-//
-
 import UIKit
 import Photos
 import HEXColor
@@ -20,7 +12,7 @@ class TabBarVC: UITabBarController {
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var cellModels: [MomentCellModel] = []
+    var models = Moment.all()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,15 +41,17 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
   
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellModels.count
+        return models.count
     }
   
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cellModel = cellModels[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath) as! SingleMomentCell
-        cell.setImageFromLocal(cell.heroImage, asset: cellModel.asset[0])
-        cell.setUploadedAt(cellModel.currentDate!)
-        cell.setDate(cellModel.photoTakenDate!)//set cal date
+        
+        let model = models[indexPath.row]
+        cell.setImageFromLocal(cell.heroImage, assetLocationId: model.assetLocationId)
+        cell.setUploadedAt(model.uploadedAt)
+        cell.setDate(model.photoTakenDate)
+        
         return cell
     }
 }
@@ -67,15 +61,17 @@ extension ViewController: XLPhotoDelegate {
         if selectedAsset.count == 0 {
             return
         }
-        
-        var cellModel = MomentCellModel(asset: selectedAsset)
         let asset = selectedAsset[0]
         
-        if let createDate = asset.creationDate {
-            cellModel.photoTakenDate = createDate
+        let locationId: String = asset.localIdentifier
+        let moment = Moment(value: ["assetLocationId": locationId])
+        
+        if let photoDate = asset.creationDate {
+            moment.photoTakenDate = photoDate
         }
         
-        cellModels.append(cellModel)
+        moment.save()
+        models = Moment.all()
         tableView.reloadData()
     }
 }

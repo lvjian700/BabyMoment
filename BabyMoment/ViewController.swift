@@ -48,9 +48,8 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath) as! SingleMomentCell
         
         let model = models[indexPath.row]
+        cell.setMoment(model)
         cell.setImageFromLocal(cell.heroImage, assetLocationId: model.assetLocationId)
-        cell.setUploadedAt(model.uploadedAt)
-        cell.setDate(model.photoTakenDate)
         
         return cell
     }

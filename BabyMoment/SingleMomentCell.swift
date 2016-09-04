@@ -1,6 +1,7 @@
 import UIKit
 import Photos
 import DateTools
+import RealmSwift
 
 class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     
@@ -10,21 +11,41 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var heroImage: UIImageView!
     @IBOutlet weak var timeAgo: UILabel!
     @IBOutlet weak var textField: UITextField!
+    var model: Moment!
     
-    var saveAction: ((content: String) -> Void)?
+    func saveAction(content: String) {
+        let realm = try! Realm()
+        try! realm.write {
+            model.text = content
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         textField.delegate = self
     }
     
+    func textFieldDidEndEditing(textField: UITextField) {
+        textFieldShouldReturn(textField)
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        saveAction?(content: textField.text ?? "")
+        if let text = textField.text {
+            saveAction(text)
+        }
+        
         textField.resignFirstResponder()
         return true
     }
     
-    func setDate(date: NSDate) {
+    func setMoment(moment: Moment) {
+        self.model = moment
+        textField.text = model.text
+        setDate(model.photoTakenDate)
+        setUploadedAt(model.uploadedAt)
+    }
+    
+    private func setDate(date: NSDate) {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "dd"
         day.text = formatter.stringFromDate(date)
@@ -36,7 +57,7 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
         time.text = oldText;
     }
     
-    func setUploadedAt(date: NSDate) {
+    private func setUploadedAt(date: NSDate) {
         let timeAgoText:String = date.timeAgoSinceNow()
         timeAgo.text = timeAgoText
     }

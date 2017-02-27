@@ -46,7 +46,6 @@
 		D0C90F3D1D6D489800D53A57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F3B1D6D489800D53A57 /* Main.storyboard */; };
 		D0C90F3F1D6D489800D53A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F3E1D6D489800D53A57 /* Assets.xcassets */; };
 		D0C90F421D6D489800D53A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F401D6D489800D53A57 /* LaunchScreen.storyboard */; };
-		D0C90F4D1D6D489900D53A57 /* BabyMomentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F4C1D6D489900D53A57 /* BabyMomentTests.swift */; };
 		D0C90F5D1D6D722400D53A57 /* SingleMomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F5C1D6D722400D53A57 /* SingleMomentCell.swift */; };
 		D0C90F601D6D778700D53A57 /* XLPhotoManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F5F1D6D778700D53A57 /* XLPhotoManager.storyboard */; };
 		D0C90F641D6D7D5E00D53A57 /* XLAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F631D6D7D5E00D53A57 /* XLAlbumCell.swift */; };
@@ -108,7 +107,6 @@
 		D0C90F411D6D489800D53A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0C90F431D6D489800D53A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C90F481D6D489900D53A57 /* BabyMomentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyMomentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0C90F4C1D6D489900D53A57 /* BabyMomentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyMomentTests.swift; sourceTree = "<group>"; };
 		D0C90F4E1D6D489900D53A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C90F5C1D6D722400D53A57 /* SingleMomentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMomentCell.swift; sourceTree = "<group>"; };
 		D0C90F5F1D6D778700D53A57 /* XLPhotoManager.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XLPhotoManager.storyboard; sourceTree = "<group>"; };
@@ -289,7 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				5FA471FE1D7936FB008CA63C /* Model */,
-				D0C90F4C1D6D489900D53A57 /* BabyMomentTests.swift */,
 				5F0DD0F81D700A9C00E63FF2 /* BirthdayHelperTest.swift */,
 				D0C90F4E1D6D489900D53A57 /* Info.plist */,
 			);
@@ -391,6 +388,7 @@
 				D0C90F311D6D489800D53A57 /* Frameworks */,
 				D0C90F321D6D489800D53A57 /* Resources */,
 				D0ADE0631D6EDEDF0079AE3C /* ShellScript */,
+				5F446C701E5BFB2700984F85 /* Integrate Reveal server */,
 			);
 			buildRules = (
 			);
@@ -485,6 +483,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5F446C701E5BFB2700984F85 /* Integrate Reveal server */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Integrate Reveal server";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "REVEAL_APP_PATH=$(mdfind kMDItemCFBundleIdentifier=\"com.ittybittyapps.Reveal2\" | head -n 1)\nBUILD_SCRIPT_PATH=\"${REVEAL_APP_PATH}/Contents/SharedSupport/Scripts/reveal_server_build_phase.sh\"\nif [ \"${REVEAL_APP_PATH}\" -a -e \"${BUILD_SCRIPT_PATH}\" ]; then\n\"${BUILD_SCRIPT_PATH}\"\nelse\necho \"Reveal Server not loaded: Cannot find a compatible Reveal app.\"\nfi";
+		};
 		D0ADE0631D6EDEDF0079AE3C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -549,7 +561,6 @@
 			files = (
 				5F0DD0F91D700A9C00E63FF2 /* BirthdayHelperTest.swift in Sources */,
 				5FA472001D793715008CA63C /* BabyProfileTests.swift in Sources */,
-				D0C90F4D1D6D489900D53A57 /* BabyMomentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

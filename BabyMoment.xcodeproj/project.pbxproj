@@ -15,7 +15,7 @@
 		5F787CB21E6539370069982A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F787CB01E6539370069982A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F787CB31E6539370069982A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F787CB11E6539370069982A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F787CB51E653F2D0069982A /* BirthdayHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F787CB41E653F2D0069982A /* BirthdayHelperSpec.swift */; };
-		5FA472001D793715008CA63C /* BabyProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA471FF1D793715008CA63C /* BabyProfileTests.swift */; };
+		5F787CB71E654A3E0069982A /* BabyProfileSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F787CB61E654A3E0069982A /* BabyProfileSpec.swift */; };
 		5FB288A91D7B107700DF386A /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB288A81D7B107700DF386A /* Moment.swift */; };
 		937F2F0D1D747FBE00232E52 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 937F2F0C1D747FBE00232E52 /* DateTools.bundle */; };
 		D0ADE0541D6E92200079AE3C /* XLPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */; };
@@ -88,7 +88,7 @@
 		5F787CB01E6539370069982A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		5F787CB11E6539370069982A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		5F787CB41E653F2D0069982A /* BirthdayHelperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayHelperSpec.swift; sourceTree = "<group>"; };
-		5FA471FF1D793715008CA63C /* BabyProfileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyProfileTests.swift; sourceTree = "<group>"; };
+		5F787CB61E654A3E0069982A /* BabyProfileSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyProfileSpec.swift; sourceTree = "<group>"; };
 		5FB288A81D7B107700DF386A /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
 		937F2F0C1D747FBE00232E52 /* DateTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = Carthage/Checkouts/DateTools/DateTools/DateTools.bundle; sourceTree = "<group>"; };
 		D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoViewController.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		5FA471FE1D7936FB008CA63C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5FA471FF1D793715008CA63C /* BabyProfileTests.swift */,
+				5F787CB61E654A3E0069982A /* BabyProfileSpec.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -580,7 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FA472001D793715008CA63C /* BabyProfileTests.swift in Sources */,
+				5F787CB71E654A3E0069982A /* BabyProfileSpec.swift in Sources */,
 				5F787CB51E653F2D0069982A /* BirthdayHelperSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

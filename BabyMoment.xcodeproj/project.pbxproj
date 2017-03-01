@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		5F0DD0F41D70050100E63FF2 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0DD0F31D70050100E63FF2 /* DateTools.framework */; };
 		5F0DD0F71D700A0900E63FF2 /* BirthdayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */; };
-		5F0DD0F91D700A9C00E63FF2 /* BirthdayHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DD0F81D700A9C00E63FF2 /* BirthdayHelperTest.swift */; };
 		5F66452D1D78730500E25CB1 /* BabyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F66452C1D78730500E25CB1 /* BabyProfile.swift */; };
 		5F6645301D78F32800E25CB1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F66452E1D78F2E700E25CB1 /* Realm.framework */; };
 		5F6645321D78F32800E25CB1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6645311D78F32800E25CB1 /* RealmSwift.framework */; };
-		5FA472001D793715008CA63C /* BabyProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA471FF1D793715008CA63C /* BabyProfileTests.swift */; };
+		5F787CB21E6539370069982A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F787CB01E6539370069982A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F787CB31E6539370069982A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F787CB11E6539370069982A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F787CB51E653F2D0069982A /* BirthdayHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F787CB41E653F2D0069982A /* BirthdayHelperSpec.swift */; };
+		5F787CB71E654A3E0069982A /* BabyProfileSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F787CB61E654A3E0069982A /* BabyProfileSpec.swift */; };
 		5FB288A91D7B107700DF386A /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB288A81D7B107700DF386A /* Moment.swift */; };
 		937F2F0D1D747FBE00232E52 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 937F2F0C1D747FBE00232E52 /* DateTools.bundle */; };
 		D0ADE0541D6E92200079AE3C /* XLPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */; };
@@ -46,7 +48,6 @@
 		D0C90F3D1D6D489800D53A57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F3B1D6D489800D53A57 /* Main.storyboard */; };
 		D0C90F3F1D6D489800D53A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F3E1D6D489800D53A57 /* Assets.xcassets */; };
 		D0C90F421D6D489800D53A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F401D6D489800D53A57 /* LaunchScreen.storyboard */; };
-		D0C90F4D1D6D489900D53A57 /* BabyMomentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F4C1D6D489900D53A57 /* BabyMomentTests.swift */; };
 		D0C90F5D1D6D722400D53A57 /* SingleMomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F5C1D6D722400D53A57 /* SingleMomentCell.swift */; };
 		D0C90F601D6D778700D53A57 /* XLPhotoManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C90F5F1D6D778700D53A57 /* XLPhotoManager.storyboard */; };
 		D0C90F641D6D7D5E00D53A57 /* XLAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C90F631D6D7D5E00D53A57 /* XLAlbumCell.swift */; };
@@ -64,14 +65,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5F787CAF1E651F8C0069982A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5F787CB21E6539370069982A /* Nimble.framework in CopyFiles */,
+				5F787CB31E6539370069982A /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5F0DD0F31D70050100E63FF2 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
 		5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayHelper.swift; sourceTree = "<group>"; };
-		5F0DD0F81D700A9C00E63FF2 /* BirthdayHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayHelperTest.swift; sourceTree = "<group>"; };
 		5F66452C1D78730500E25CB1 /* BabyProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyProfile.swift; sourceTree = "<group>"; };
 		5F66452E1D78F2E700E25CB1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		5F6645311D78F32800E25CB1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		5FA471FF1D793715008CA63C /* BabyProfileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyProfileTests.swift; sourceTree = "<group>"; };
+		5F787CB01E6539370069982A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		5F787CB11E6539370069982A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		5F787CB41E653F2D0069982A /* BirthdayHelperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayHelperSpec.swift; sourceTree = "<group>"; };
+		5F787CB61E654A3E0069982A /* BabyProfileSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyProfileSpec.swift; sourceTree = "<group>"; };
 		5FB288A81D7B107700DF386A /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
 		937F2F0C1D747FBE00232E52 /* DateTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = Carthage/Checkouts/DateTools/DateTools/DateTools.bundle; sourceTree = "<group>"; };
 		D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +125,6 @@
 		D0C90F411D6D489800D53A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0C90F431D6D489800D53A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C90F481D6D489900D53A57 /* BabyMomentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyMomentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0C90F4C1D6D489900D53A57 /* BabyMomentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyMomentTests.swift; sourceTree = "<group>"; };
 		D0C90F4E1D6D489900D53A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C90F5C1D6D722400D53A57 /* SingleMomentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMomentCell.swift; sourceTree = "<group>"; };
 		D0C90F5F1D6D778700D53A57 /* XLPhotoManager.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XLPhotoManager.storyboard; sourceTree = "<group>"; };
@@ -150,7 +166,7 @@
 		5FA471FE1D7936FB008CA63C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5FA471FF1D793715008CA63C /* BabyProfileTests.swift */,
+				5F787CB61E654A3E0069982A /* BabyProfileSpec.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -251,6 +267,8 @@
 		D0C90F2B1D6D489800D53A57 = {
 			isa = PBXGroup;
 			children = (
+				5F787CB01E6539370069982A /* Nimble.framework */,
+				5F787CB11E6539370069982A /* Quick.framework */,
 				937F2F0C1D747FBE00232E52 /* DateTools.bundle */,
 				D0ADE0641D6EDF100079AE3C /* Frameworks */,
 				D0C90F361D6D489800D53A57 /* BabyMoment */,
@@ -289,9 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				5FA471FE1D7936FB008CA63C /* Model */,
-				D0C90F4C1D6D489900D53A57 /* BabyMomentTests.swift */,
-				5F0DD0F81D700A9C00E63FF2 /* BirthdayHelperTest.swift */,
 				D0C90F4E1D6D489900D53A57 /* Info.plist */,
+				5F787CB41E653F2D0069982A /* BirthdayHelperSpec.swift */,
 			);
 			path = BabyMomentTests;
 			sourceTree = "<group>";
@@ -391,6 +408,7 @@
 				D0C90F311D6D489800D53A57 /* Frameworks */,
 				D0C90F321D6D489800D53A57 /* Resources */,
 				D0ADE0631D6EDEDF0079AE3C /* ShellScript */,
+				5F446C701E5BFB2700984F85 /* Integrate Reveal server */,
 			);
 			buildRules = (
 			);
@@ -408,6 +426,7 @@
 				D0C90F441D6D489900D53A57 /* Sources */,
 				D0C90F451D6D489900D53A57 /* Frameworks */,
 				D0C90F461D6D489900D53A57 /* Resources */,
+				5F787CAF1E651F8C0069982A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -485,6 +504,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5F446C701E5BFB2700984F85 /* Integrate Reveal server */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Integrate Reveal server";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "REVEAL_APP_PATH=$(mdfind kMDItemCFBundleIdentifier=\"com.ittybittyapps.Reveal2\" | head -n 1)\nBUILD_SCRIPT_PATH=\"${REVEAL_APP_PATH}/Contents/SharedSupport/Scripts/reveal_server_build_phase.sh\"\nif [ \"${REVEAL_APP_PATH}\" -a -e \"${BUILD_SCRIPT_PATH}\" ]; then\n\"${BUILD_SCRIPT_PATH}\"\nelse\necho \"Reveal Server not loaded: Cannot find a compatible Reveal app.\"\nfi";
+		};
 		D0ADE0631D6EDEDF0079AE3C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -547,9 +580,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F0DD0F91D700A9C00E63FF2 /* BirthdayHelperTest.swift in Sources */,
-				5FA472001D793715008CA63C /* BabyProfileTests.swift in Sources */,
-				D0C90F4D1D6D489900D53A57 /* BabyMomentTests.swift in Sources */,
+				5F787CB71E654A3E0069982A /* BabyProfileSpec.swift in Sources */,
+				5F787CB51E653F2D0069982A /* BirthdayHelperSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

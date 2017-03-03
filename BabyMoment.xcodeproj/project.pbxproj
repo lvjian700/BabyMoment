@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		5F0DD0F41D70050100E63FF2 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0DD0F31D70050100E63FF2 /* DateTools.framework */; };
 		5F0DD0F71D700A0900E63FF2 /* BirthdayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */; };
+		5F64D7821E693E9500308160 /* MomentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64D7811E693E9500308160 /* MomentViewModel.swift */; };
+		5F64D7851E693ECF00308160 /* MomentViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64D7841E693ECF00308160 /* MomentViewModelSpec.swift */; };
 		5F66452D1D78730500E25CB1 /* BabyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F66452C1D78730500E25CB1 /* BabyProfile.swift */; };
 		5F6645301D78F32800E25CB1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F66452E1D78F2E700E25CB1 /* Realm.framework */; };
 		5F6645321D78F32800E25CB1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6645311D78F32800E25CB1 /* RealmSwift.framework */; };
-		5F787CB21E6539370069982A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F787CB01E6539370069982A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F787CB31E6539370069982A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F787CB11E6539370069982A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F787CB21E6539370069982A /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 5F787CB01E6539370069982A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F787CB31E6539370069982A /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 5F787CB11E6539370069982A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F787CB51E653F2D0069982A /* BirthdayHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F787CB41E653F2D0069982A /* BirthdayHelperSpec.swift */; };
 		5F787CB71E654A3E0069982A /* BabyProfileSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F787CB61E654A3E0069982A /* BabyProfileSpec.swift */; };
 		5FB288A91D7B107700DF386A /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB288A81D7B107700DF386A /* Moment.swift */; };
@@ -66,15 +68,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5F787CAF1E651F8C0069982A /* CopyFiles */ = {
+		5F787CAF1E651F8C0069982A /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5F787CB21E6539370069982A /* Nimble.framework in CopyFiles */,
-				5F787CB31E6539370069982A /* Quick.framework in CopyFiles */,
+				5F787CB21E6539370069982A /* Nimble.framework in Copy Files */,
+				5F787CB31E6539370069982A /* Quick.framework in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -82,6 +85,8 @@
 /* Begin PBXFileReference section */
 		5F0DD0F31D70050100E63FF2 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
 		5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayHelper.swift; sourceTree = "<group>"; };
+		5F64D7811E693E9500308160 /* MomentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentViewModel.swift; sourceTree = "<group>"; };
+		5F64D7841E693ECF00308160 /* MomentViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentViewModelSpec.swift; sourceTree = "<group>"; };
 		5F66452C1D78730500E25CB1 /* BabyProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyProfile.swift; sourceTree = "<group>"; };
 		5F66452E1D78F2E700E25CB1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		5F6645311D78F32800E25CB1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -161,6 +166,22 @@
 				5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		5F64D7801E693E5A00308160 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5F64D7811E693E9500308160 /* MomentViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		5F64D7831E693EBE00308160 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5F64D7841E693ECF00308160 /* MomentViewModelSpec.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		5FA471FE1D7936FB008CA63C /* Model */ = {
@@ -289,6 +310,7 @@
 		D0C90F361D6D489800D53A57 /* BabyMoment */ = {
 			isa = PBXGroup;
 			children = (
+				5F64D7801E693E5A00308160 /* ViewModel */,
 				5F0DD0F51D7009A200E63FF2 /* Helpers */,
 				D0ADE0651D6EE9180079AE3C /* Vender */,
 				D0ADE05B1D6ED5F80079AE3C /* Model */,
@@ -306,6 +328,7 @@
 		D0C90F4B1D6D489900D53A57 /* BabyMomentTests */ = {
 			isa = PBXGroup;
 			children = (
+				5F64D7831E693EBE00308160 /* ViewModel */,
 				5FA471FE1D7936FB008CA63C /* Model */,
 				D0C90F4E1D6D489900D53A57 /* Info.plist */,
 				5F787CB41E653F2D0069982A /* BirthdayHelperSpec.swift */,
@@ -426,7 +449,7 @@
 				D0C90F441D6D489900D53A57 /* Sources */,
 				D0C90F451D6D489900D53A57 /* Frameworks */,
 				D0C90F461D6D489900D53A57 /* Resources */,
-				5F787CAF1E651F8C0069982A /* CopyFiles */,
+				5F787CAF1E651F8C0069982A /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -554,6 +577,7 @@
 				D0ADE0581D6E96F00079AE3C /* XLPhotoFooterView.swift in Sources */,
 				D0C90F661D6D7D9C00D53A57 /* XLAlbumViewController.swift in Sources */,
 				D0ADE0B81D6F24C50079AE3C /* ChooseGenderViewController.swift in Sources */,
+				5F64D7821E693E9500308160 /* MomentViewModel.swift in Sources */,
 				D0ADE0B41D6EEC7F0079AE3C /* IQToolbar.swift in Sources */,
 				D0ADE0A61D6EEC7F0079AE3C /* IQNSArray+Sort.swift in Sources */,
 				D0ADE0AC1D6EEC7F0079AE3C /* IQKeyboardManagerConstants.swift in Sources */,
@@ -581,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F787CB71E654A3E0069982A /* BabyProfileSpec.swift in Sources */,
+				5F64D7851E693ECF00308160 /* MomentViewModelSpec.swift in Sources */,
 				5F787CB51E653F2D0069982A /* BirthdayHelperSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

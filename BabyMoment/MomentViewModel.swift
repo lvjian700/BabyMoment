@@ -1,4 +1,5 @@
 import Foundation
+import RealmSwift
 
 class MomentViewModel {
     let model: Moment
@@ -11,8 +12,19 @@ class MomentViewModel {
         self.assetLocationId = momentModel.assetLocationId
     }
 
+    var messageDidChange: ((MomentViewModel) -> ())?
+
     var message: String {
-        return model.text
+        get {
+            return model.text
+        }
+        set {
+            let realm = try! Realm()
+            try! realm.write {
+                model.text = newValue
+            }
+            self.messageDidChange?(self)
+        }
     }
 
     var photoTakenDesc: String {

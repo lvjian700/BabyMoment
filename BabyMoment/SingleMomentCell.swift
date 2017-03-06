@@ -12,15 +12,8 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var timeAgo: UILabel!
     @IBOutlet weak var textField: UITextField!
 
-    var model: Moment!
-
-    func saveAction(content: String) {
-        let realm = try! Realm()
-        try! realm.write {
-            model.text = content
-        }
-    }
-
+    var viewModel: MomentViewModel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         textField.delegate = self
@@ -31,8 +24,8 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if let text = textField.text {
-            saveAction(text)
+        if let message = textField.text {
+            self.viewModel.message = message
         }
 
         textField.resignFirstResponder()
@@ -40,15 +33,22 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     }
     
     func configureCell(cellViewModel: MomentViewModel) {
-        self.textField.text = cellViewModel.message
-        self.time.text      = cellViewModel.photoTakenDesc
-        self.timeAgo.text   = cellViewModel.uploadedAtDesc
+        self.viewModel      = cellViewModel
+        self.textField.text = viewModel.message
+        self.time.text      = viewModel.photoTakenDesc
+        self.timeAgo.text   = viewModel.uploadedAtDesc
         
         setImageFromLocal(self.heroImage, assetLocationId: cellViewModel.assetLocationId)
+        self.viewModel.messageDidChange = { [weak self] viewModel in
+            self?.textField.text = viewModel.message
+        }
     }
     
     func setImageFromLocal(imageView: UIImageView, assetLocationId: String) {
         let result: PHFetchResult = PHAsset.fetchAssetsWithLocalIdentifiers([assetLocationId], options: nil)
+        if result.firstObject == nil {
+            return
+        }
         let asset:PHAsset = result.firstObject as! PHAsset
         
         let request = PHImageRequestOptions()

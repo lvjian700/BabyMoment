@@ -11,59 +11,42 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var heroImage: UIImageView!
     @IBOutlet weak var timeAgo: UILabel!
     @IBOutlet weak var textField: UITextField!
+
     var model: Moment!
-    
+
     func saveAction(content: String) {
         let realm = try! Realm()
         try! realm.write {
             model.text = content
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         textField.delegate = self
     }
-    
+
     func textFieldDidEndEditing(textField: UITextField) {
         textFieldShouldReturn(textField)
     }
-    
+
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if let text = textField.text {
             saveAction(text)
         }
-        
+
         textField.resignFirstResponder()
         return true
     }
     
-    func setMoment(moment: Moment) {
-        self.model = moment
-        textField.text = model.text
-        setDate(model.photoTakenDate)
-        setUploadedAt(model.uploadedAt)
+    func configureCell(cellViewModel: MomentViewModel) {
+        self.textField.text = cellViewModel.message
+        self.time.text      = cellViewModel.photoTakenDesc
+        self.timeAgo.text   = cellViewModel.uploadedAtDesc
+        
+        setImageFromLocal(self.heroImage, assetLocationId: cellViewModel.assetLocationId)
     }
     
-    private func setDate(date: NSDate) {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "dd"
-        day.text = formatter.stringFromDate(date)
-        
-        formatter.dateFormat = "yyyy.MM"
-        yearMonth.text = formatter.stringFromDate(date)
-        
-        let oldText:String = date.howOld((BabyProfile.currentProfile()?.birthday)!)
-        time.text = oldText;
-    }
-    
-    private func setUploadedAt(date: NSDate) {
-        let timeAgoText:String = date.timeAgoSinceNow()
-        timeAgo.text = timeAgoText
-    }
-}
-
-extension UITableViewCell {
     func setImageFromLocal(imageView: UIImageView, assetLocationId: String) {
         let result: PHFetchResult = PHAsset.fetchAssetsWithLocalIdentifiers([assetLocationId], options: nil)
         let asset:PHAsset = result.firstObject as! PHAsset

@@ -45,13 +45,17 @@ extension ViewController: UITableViewDataSource {
     }
   
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath) as! SingleMomentCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath)
+        
+        guard let momentCell = cell as? SingleMomentCell else { return UITableViewCell() }
+        guard let profile = BabyProfile.currentProfile() else { return UITableViewCell() }
+        guard let birthday = profile.birthday else { return UITableViewCell() }
         
         let model = models[indexPath.row]
-        cell.setMoment(model)
-        cell.setImageFromLocal(cell.heroImage, assetLocationId: model.assetLocationId)
+        let viewModel = MomentViewModel(model, birthday: birthday)
+        momentCell.configureCell(viewModel)
         
-        return cell
+        return momentCell
     }
 }
 

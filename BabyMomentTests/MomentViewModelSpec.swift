@@ -2,13 +2,7 @@ import Quick
 import Nimble
 import RealmSwift
 import DateTools
-
 @testable import BabyMoment
-
-func daysAgo(days:Int) -> NSDate {
-    let now = NSDate()
-    return now.dateByAddingDays(-days)
-}
 
 class MomentViewModelSpec: QuickSpec {
     override func spec() {
@@ -19,20 +13,11 @@ class MomentViewModelSpec: QuickSpec {
         formatter.dateFormat = "yyyy-MM-dd"
 
         beforeEach {
-            let birthday:NSDate!  = formatter.dateFromString("2015-09-11")
-            let takenDate:NSDate! = formatter.dateFromString("2016-09-2")
-            let uploadedAt:NSDate = daysAgo(3)
-
-            let moment = Moment(value: [
-                "assetLocationId": "assetId",
-                "uploadedAt": uploadedAt,
-                "photoTakenDate": takenDate,
-                "text": "message"
-                ])
+            let birthday:NSDate! = MomentFactories.birthday
+            let moment = MomentFactories.buildMoment()
 
             viewModel = MomentViewModel(moment, birthday: birthday)
 
-            
             try! realm.write {
                 realm.deleteAll()
             }

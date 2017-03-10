@@ -6,22 +6,69 @@ import RealmSwift
 class MomentRepositorySpec: QuickSpec {
     override func spec() {
         let realm = try! Realm()
+        let repository = MomentRepository()
+
+        afterEach {
+            try! realm.write {
+                realm.deleteAll()
+            }
+        }
 
         describe("#moments") {
-            let repository = MomentRepository()
-
-            beforeEach() {
+            beforeEach {
                 MomentFactories.buildMoment().save()
-            }
-
-            afterEach() {
-                try! realm.write {
-                    realm.deleteAll()
-                }
             }
 
             it("returns moments") {
                 expect(repository.moments()).to(haveCount(1))
+            }
+        }
+
+        describe("#create") {
+            beforeEach {
+                let moment = MomentFactories.buildMoment()
+                repository.create(moment)
+            }
+
+            it("creates a moment") {
+                expect(repository.moments()).to(haveCount(1))
+            }
+        }
+
+        describe("subscribeToChanged") {
+            var isChangedFired = false
+
+            beforeEach() {
+                repository.subscribeToChanged {
+                    isChangedFired = true
+                }
+
+                MomentFactories.buildMoment().save()
+            }
+
+            afterEach() {
+                repository.unsubscribeFromChanged()
+            }
+
+            it("fires the changed") {
+                expect(isChangedFired).toEventually(beTrue())
+            }
+        }
+
+        describe("unsubscribeFromChanged") {
+            var isChangedFired = false
+
+            beforeEach() {
+                repository.subscribeToChanged {
+                    isChangedFired = true
+                }
+
+                repository.unsubscribeFromChanged()
+                MomentFactories.buildMoment().save()
+            }
+
+            it("won't fires the changed") {
+                expect(isChangedFired).toEventually(beFalse())
             }
         }
     }

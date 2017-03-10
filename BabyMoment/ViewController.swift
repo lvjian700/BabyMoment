@@ -12,15 +12,34 @@ class TabBarVC: UITabBarController {
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var models = Moment.all()
+    
+    var viewModel: MomentsViewModel!
+    var birthday: NSDate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.tintColor = UIColor(rgba: "#F6DC6E")
+        
+        birthday = BabyProfile.currentProfile()!.birthday!
+        viewModel = MomentsViewModel(MomentRepository(), birthday: birthday)
+        viewModel.configureCellModels()
+        viewModel.subscribeToChanged { [weak self] in
+            self?.reloadData()
+        }
+        
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
         self.tableView.estimatedRowHeight = 314
         self.tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    deinit {
+        viewModel.unsubscribeFromChanged()
+    }
+    
+    func reloadData() {
+        viewModel.configureCellModels()
+        tableView.reloadData()
     }
     
     @IBAction func selectPhoto(sender: AnyObject) {
@@ -41,17 +60,19 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
   
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        guard let count = viewModel.cellViewModels?.count else { return 0 }
+        return count
     }
   
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath) as! SingleMomentCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath)
         
-        let model = models[indexPath.row]
-        cell.setMoment(model)
-        cell.setImageFromLocal(cell.heroImage, assetLocationId: model.assetLocationId)
+        guard let momentCell = cell as? SingleMomentCell else { return UITableViewCell() }
+        guard let cellViewModels = viewModel.cellViewModels else { return UITableViewCell() }
+
+        momentCell.configureCell(cellViewModels[indexPath.row])
         
-        return cell
+        return momentCell
     }
 }
 
@@ -62,16 +83,7 @@ extension ViewController: XLPhotoDelegate {
         }
         let asset = selectedAsset[0]
         
-        let locationId: String = asset.localIdentifier
-        let moment = Moment(value: ["assetLocationId": locationId])
-        
-        if let photoDate = asset.creationDate {
-            moment.photoTakenDate = photoDate
-        }
-        
-        moment.save()
-        models = Moment.all()
-        tableView.reloadData()
+        viewModel.createMoment(asset.localIdentifier, photoTakenDate: asset.creationDate!)
     }
 }
 

@@ -44,14 +44,19 @@ class BabyProfile: Object {
 extension BabyProfile {
     
     class func currentProfile() -> BabyProfile? {
-        let realm = try! Realm()
+        guard let realm = try? Realm() else { return nil }
         return realm.objects(BabyProfile.self).first
     }
     
     func save() {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(self)
+        guard let realm = try? Realm() else { return }
+        
+        do {
+            try realm.write {
+                realm.add(self)
+            }
+        } catch {
+            print("Something wrong on saving BabyProfile")
         }
     }
 }

@@ -46,10 +46,9 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
     
     func setImageFromLocal(imageView: UIImageView, assetLocationId: String) {
         let result: PHFetchResult = PHAsset.fetchAssetsWithLocalIdentifiers([assetLocationId], options: nil)
-        if result.firstObject == nil {
-            return
-        }
-        let asset:PHAsset = result.firstObject as! PHAsset
+        guard let firstResult = result.firstObject else { return }
+        
+        let asset:PHAsset = firstResult as! PHAsset
         
         let request = PHImageRequestOptions()
         request.resizeMode = .Exact

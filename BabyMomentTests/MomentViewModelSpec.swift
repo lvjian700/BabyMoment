@@ -14,15 +14,15 @@ class MomentViewModelSpec: QuickSpec {
 
         beforeEach {
             let birthday:NSDate! = MomentFactories.birthday
-            let moment = MomentFactories.buildMoment()
+            let moment = MomentFactories.createMoment()
 
             viewModel = MomentViewModel(moment, birthday: birthday)
+        }
 
+        afterEach {
             try! realm.write {
                 realm.deleteAll()
             }
-
-            moment.save()
         }
 
         describe("message") {
@@ -70,3 +70,4 @@ class MomentViewModelSpec: QuickSpec {
         }
     }
 }
+

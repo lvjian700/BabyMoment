@@ -19,11 +19,15 @@ class MomentViewModel {
             return model.text
         }
         set {
-            let realm = try! Realm()
-            try! realm.write {
-                model.text = newValue
+            guard let realm = try? Realm() else { return }
+            do {
+                try realm.write {
+                    model.text = newValue
+                }
+                self.messageDidChange?(self)
+            } catch {
+                print("Something wrong on updating text, newValue:\(newValue), oldValue: \(message)")
             }
-            self.messageDidChange?(self)
         }
     }
 

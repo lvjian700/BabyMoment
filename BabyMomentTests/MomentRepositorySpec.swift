@@ -16,7 +16,7 @@ class MomentRepositorySpec: QuickSpec {
 
         describe("#moments") {
             beforeEach {
-                MomentFactories.buildMoment().save()
+                MomentFactories.createMoment()
             }
 
             it("returns moments") {
@@ -43,7 +43,7 @@ class MomentRepositorySpec: QuickSpec {
                     isChangedFired = true
                 }
 
-                MomentFactories.buildMoment().save()
+                MomentFactories.createMoment()
             }
 
             afterEach() {
@@ -64,7 +64,7 @@ class MomentRepositorySpec: QuickSpec {
                 }
 
                 repository.unsubscribeFromChanged()
-                MomentFactories.buildMoment().save()
+                MomentFactories.createMoment()
             }
 
             it("won't fires the changed") {
@@ -73,3 +73,4 @@ class MomentRepositorySpec: QuickSpec {
         }
     }
 }
+

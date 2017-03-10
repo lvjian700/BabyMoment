@@ -1,9 +1,17 @@
 import Foundation
+import RealmSwift
 @testable import BabyMoment
 
 func daysAgo(days:Int) -> NSDate {
     let now = NSDate()
     return now.dateByAddingDays(-days)
+}
+
+func saveMoment(m: Moment) {
+    let realm = try! Realm()
+    try! realm.write {
+        realm.add(m)
+    }
 }
 
 class MomentFactories {
@@ -28,4 +36,12 @@ class MomentFactories {
             "text":            "message"
         ])
     }
+
+    static func createMoment() -> Moment {
+        let moment = buildMoment()
+        saveMoment(moment)
+
+        return moment
+    }
 }
+

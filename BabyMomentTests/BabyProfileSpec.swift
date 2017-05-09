@@ -6,7 +6,7 @@ import RealmSwift
 class BabyProfileSpec: QuickSpec {
     override func spec() {
         beforeEach {
-            NSUserDefaults.resetStandardUserDefaults()
+            UserDefaults.resetStandardUserDefaults()
             let realm = try! Realm()
             try! realm.write {
                 realm.deleteAll()
@@ -15,23 +15,23 @@ class BabyProfileSpec: QuickSpec {
 
         describe("initWithUserDefault") {
             var baby: BabyProfile!
-            var birthdayDate: NSDate!
+            var birthdayDate: Date!
 
             context("when a baby profile saved") {
                 beforeEach {
-                    let formatter = NSDateFormatter()
+                    let formatter = DateFormatter()
                     formatter.dateFormat = "yyyy-MM-dd"
-                    birthdayDate = formatter.dateFromString("2015-09-11")
+                    birthdayDate = formatter.date(from: "2015-09-11")
 
                     BabyProfile.saveName("xuebao")
-                    BabyProfile.saveGender(Gender.Boy)
+                    BabyProfile.saveGender(Gender.boy)
                     BabyProfile.saveBirthday(birthdayDate)
 
                     baby = BabyProfile.initWithUserDefault()
                 }
 
                 it("returns name")     { expect(baby.name)     == "xuebao"            }
-                it("returns gender")   { expect(baby.gender)   == Gender.Boy.rawValue }
+                it("returns gender")   { expect(baby.gender)   == Gender.boy.rawValue }
                 it("returns birthday") { expect(baby.birthday) == birthdayDate        }
             }
         }
@@ -41,7 +41,7 @@ class BabyProfileSpec: QuickSpec {
                 var baby: BabyProfile!
 
                 beforeEach {
-                    baby = BabyProfile(value: ["name": "xuebao", "gender": Gender.Boy.rawValue, "birthday": NSDate()])
+                    baby = BabyProfile(value: ["name": "xuebao", "gender": Gender.boy.rawValue, "birthday": Date()])
                     baby.save()
                 }
 
@@ -60,7 +60,7 @@ class BabyProfileSpec: QuickSpec {
             var expected: BabyProfile!
 
             beforeEach {
-                baby = BabyProfile(value: ["name": "xuebao", "gender": Gender.Boy.rawValue, "birthday": NSDate()])
+                baby = BabyProfile(value: ["name": "xuebao", "gender": Gender.boy.rawValue, "birthday": Date()])
 
                 baby.save()
 

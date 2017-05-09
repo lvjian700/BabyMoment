@@ -17,7 +17,7 @@ class XLAlbumCell: UITableViewCell {
 }
 
 extension XLAlbumCell {
-    func configCell(albumTitle: String, assetCollection: PHAssetCollection) {
+    func configCell(_ albumTitle: String, assetCollection: PHAssetCollection) {
         albumNameLabel.text = albumTitle
         
         let options = PHFetchOptions()
@@ -25,24 +25,24 @@ extension XLAlbumCell {
             NSSortDescriptor(key: "creationDate", ascending: true)
         ]
         
-        let fetchResult = PHAsset.fetchAssetsInAssetCollection(assetCollection, options: options)
+        let fetchResult = PHAsset.fetchAssets(in: assetCollection, options: options)
         albumPhotoCountLabel.text = "\(fetchResult.count) photos"
         
         let request = PHImageRequestOptions()
-        request.deliveryMode = .Opportunistic
-        request.resizeMode = .Exact
+        request.deliveryMode = .opportunistic
+        request.resizeMode = .exact
         
-        let scale = UIScreen.mainScreen().scale
+        let scale = UIScreen.main.scale
         let targetSize = CGSize(width: 70 * scale, height: 70 * scale)
         
-        let manager = PHImageManager.defaultManager()
+        let manager = PHImageManager.default()
         
         if tag != 0 {
             manager.cancelImageRequest(PHImageRequestID(tag))
         }
         
         if fetchResult.count > 0 {
-            tag = Int(manager.requestImageForAsset(fetchResult.firstObject as! PHAsset, targetSize: targetSize, contentMode: PHImageContentMode.AspectFill, options: request) { (image, _) -> Void in
+            tag = Int(manager.requestImage(for: fetchResult.firstObject! as PHAsset, targetSize: targetSize, contentMode: PHImageContentMode.aspectFill, options: request) { (image, _) -> Void in
                 self.albumCoverImageView.image = image
                 })
         } else {

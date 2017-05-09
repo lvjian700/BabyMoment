@@ -5,16 +5,16 @@ import Nimble
 class BirthdayHelperSpec: QuickSpec {
     override func spec() {
         describe("howOld") {
-            let formatter = NSDateFormatter()
+            let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
 
             context("when brithday is 2015-09-11 and now is 2016-09-2") {
-                var brithday: NSDate!
-                var now: NSDate!
+                var brithday: Date!
+                var now: Date!
 
                 beforeEach {
-                    brithday = formatter.dateFromString("2015-09-11")
-                    now = formatter.dateFromString("2016-09-2")
+                    brithday = formatter.date(from: "2015-09-11")
+                    now = formatter.date(from: "2016-09-2")
                 }
 
                 it("returns described age") {

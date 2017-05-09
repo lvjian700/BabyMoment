@@ -9,11 +9,11 @@ class MomentViewModelSpec: QuickSpec {
         var viewModel: MomentViewModel!
         let realm = try! Realm()
 
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
 
         beforeEach {
-            let birthday:NSDate! = MomentFactories.birthday
+            let birthday:Date! = MomentFactories.birthday
             let moment = MomentFactories.createMoment()
 
             viewModel = MomentViewModel(moment, birthday: birthday)

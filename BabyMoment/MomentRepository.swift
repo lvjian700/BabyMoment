@@ -16,11 +16,11 @@ class MomentRepository: MomentRepositoryProtocol {
     func moments() -> [Moment] {
         guard let realm = defaultRealm() else { return [] }
 
-        let results = realm.objects(Moment.self).sorted("uploadedAt", ascending: false)
+        let results = realm.objects(Moment.self).sorted(byKeyPath: "uploadedAt", ascending: false)
         return Array<Moment>(results)
     }
 
-    func create(moment: Moment) {
+    func create(_ moment: Moment) {
         guard let realm = defaultRealm() else { return }
         do {
             try realm.write {
@@ -31,12 +31,12 @@ class MomentRepository: MomentRepositoryProtocol {
         }
     }
 
-    func subscribeToChanged(block: () -> Void) {
+    func subscribeToChanged(_ block: @escaping () -> Void) {
         guard let realm = defaultRealm() else { return }
 
         notificationToken = realm.objects(Moment.self).addNotificationBlock { (changes: RealmCollectionChange) in
             switch changes {
-            case .Update(_, _, _, _):
+            case .update(_, _, _, _):
                 block()
                 break
             default:

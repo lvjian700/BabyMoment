@@ -4,9 +4,9 @@ class MomentsViewModel {
     var cellViewModels: [MomentViewModel]?
 
     let repository:     MomentRepositoryProtocol
-    let birthday:       NSDate
+    let birthday:       Date
 
-    required init(_ repository: MomentRepositoryProtocol, birthday: NSDate) {
+    required init(_ repository: MomentRepositoryProtocol, birthday: Date) {
         self.repository = repository
         self.birthday = birthday
     }
@@ -17,7 +17,7 @@ class MomentsViewModel {
         }
     }
 
-    func createMoment(assetLocationId: String, photoTakenDate: NSDate) {
+    func createMoment(_ assetLocationId: String, photoTakenDate: Date) {
         let moment = Moment(value: [
             "assetLocationId": assetLocationId,
             "photoTakenDate":  photoTakenDate
@@ -26,7 +26,7 @@ class MomentsViewModel {
         repository.create(moment)
     }
 
-    func subscribeToChanged(block: () -> Void) {
+    func subscribeToChanged(_ block: @escaping () -> Void) {
         repository.subscribeToChanged(block)
     }
 

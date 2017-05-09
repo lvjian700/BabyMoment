@@ -2,8 +2,8 @@ import Foundation
 
 protocol MomentRepositoryProtocol {
     func moments() -> [Moment]
-    func create(moment: Moment)
+    func create(_ moment: Moment)
     
-    func subscribeToChanged(block: () -> Void)
+    func subscribeToChanged(_ block: @escaping () -> Void)
     func unsubscribeFromChanged()
 }

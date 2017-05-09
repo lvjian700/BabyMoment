@@ -2,42 +2,42 @@ import Foundation
 import RealmSwift
 
 enum Gender: Int {
-    case Girl, Boy
+    case girl, boy
 }
 
 class BabyProfile: Object {
     dynamic var name = ""
-    dynamic var gender = Gender.Girl.rawValue
-    dynamic var birthday: NSDate?
+    dynamic var gender = Gender.girl.rawValue
+    dynamic var birthday: Date?
     
     class func initWithUserDefault() -> BabyProfile {
-        let name:String = NSUserDefaults.standardUserDefaults().stringForKey("kBabyName")!
-        let gender:Int = NSUserDefaults.standardUserDefaults().integerForKey("kBabyGender")
+        let name:String = UserDefaults.standard.string(forKey: "kBabyName")!
+        let gender:Int = UserDefaults.standard.integer(forKey: "kBabyGender")
         
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        let birthdayDate:NSDate = formatter.dateFromString(NSUserDefaults.standardUserDefaults().stringForKey("kBabyBirthday")!)!
+        let birthdayDate:Date = formatter.date(from: UserDefaults.standard.string(forKey: "kBabyBirthday")!)!
         
         return BabyProfile(value: ["name": name, "gender": gender, "birthday": birthdayDate])
     }
     
-    class func saveName(name: String) {
-        NSUserDefaults.standardUserDefaults().setObject(name, forKey: "kBabyName")
-        NSUserDefaults.standardUserDefaults().synchronize()
+    class func saveName(_ name: String) {
+        UserDefaults.standard.set(name, forKey: "kBabyName")
+        UserDefaults.standard.synchronize()
     }
     
-    class func saveGender(gender: Gender) {
-        NSUserDefaults.standardUserDefaults().setObject(gender.rawValue, forKey: "kBabyGender")
-        NSUserDefaults.standardUserDefaults().synchronize()
+    class func saveGender(_ gender: Gender) {
+        UserDefaults.standard.set(gender.rawValue, forKey: "kBabyGender")
+        UserDefaults.standard.synchronize()
     }
     
-    class func saveBirthday(birthday: NSDate) {
-        let formatter = NSDateFormatter()
+    class func saveBirthday(_ birthday: Date) {
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        let birthday:String = formatter.stringFromDate(birthday)
+        let birthday:String = formatter.string(from: birthday)
         
-        NSUserDefaults.standardUserDefaults().setObject(birthday, forKey: "kBabyBirthday")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.set(birthday, forKey: "kBabyBirthday")
+        UserDefaults.standard.synchronize()
     }
 }
 

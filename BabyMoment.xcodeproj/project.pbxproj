@@ -7,47 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DC05764CBBEB5776ADE64D1 /* Pods_BabyMomentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40DA127FF846615CBC02A50 /* Pods_BabyMomentTests.framework */; };
+		4F7D0016EA80D9306D889C7A /* Pods_BabyMoment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8539352E1A5633FB1156FB59 /* Pods_BabyMoment.framework */; };
 		5F05B98E1E713EAA00D81D20 /* MomentFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05B98D1E713EAA00D81D20 /* MomentFactories.swift */; };
 		5F05B9911E7152C100D81D20 /* MomentRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05B98F1E7152C000D81D20 /* MomentRepositoryProtocol.swift */; };
 		5F05B9921E7152C100D81D20 /* MomentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05B9901E7152C100D81D20 /* MomentsViewModel.swift */; };
 		5F05B9971E71530B00D81D20 /* MomentsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05B9961E71530B00D81D20 /* MomentsViewModelSpec.swift */; };
 		5F05B99A1E71539100D81D20 /* MomentRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05B9991E71539100D81D20 /* MomentRepositorySpec.swift */; };
 		5F05B99C1E71543C00D81D20 /* MomentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05B99B1E71543C00D81D20 /* MomentRepository.swift */; };
-		5F0DD0F41D70050100E63FF2 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0DD0F31D70050100E63FF2 /* DateTools.framework */; };
 		5F0DD0F71D700A0900E63FF2 /* BirthdayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */; };
 		5F64D7821E693E9500308160 /* MomentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64D7811E693E9500308160 /* MomentViewModel.swift */; };
 		5F64D7851E693ECF00308160 /* MomentViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64D7841E693ECF00308160 /* MomentViewModelSpec.swift */; };
 		5F66452D1D78730500E25CB1 /* BabyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F66452C1D78730500E25CB1 /* BabyProfile.swift */; };
-		5F6645301D78F32800E25CB1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F66452E1D78F2E700E25CB1 /* Realm.framework */; };
-		5F6645321D78F32800E25CB1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6645311D78F32800E25CB1 /* RealmSwift.framework */; };
-		5F787CB21E6539370069982A /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 5F787CB01E6539370069982A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F787CB31E6539370069982A /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 5F787CB11E6539370069982A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F787CB51E653F2D0069982A /* BirthdayHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F787CB41E653F2D0069982A /* BirthdayHelperSpec.swift */; };
 		5F787CB71E654A3E0069982A /* BabyProfileSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F787CB61E654A3E0069982A /* BabyProfileSpec.swift */; };
 		5FB288A91D7B107700DF386A /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB288A81D7B107700DF386A /* Moment.swift */; };
-		937F2F0D1D747FBE00232E52 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 937F2F0C1D747FBE00232E52 /* DateTools.bundle */; };
 		D0ADE0541D6E92200079AE3C /* XLPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */; };
 		D0ADE0561D6E94A20079AE3C /* XLPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0551D6E94A20079AE3C /* XLPhotoCell.swift */; };
 		D0ADE0581D6E96F00079AE3C /* XLPhotoFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0571D6E96F00079AE3C /* XLPhotoFooterView.swift */; };
 		D0ADE05F1D6ED76F0079AE3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ADE05E1D6ED76F0079AE3C /* Images.xcassets */; };
-		D0ADE0611D6EDEAD0079AE3C /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0ADE0601D6EDEAD0079AE3C /* HEXColor.framework */; };
-		D0ADE0A61D6EEC7F0079AE3C /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0901D6EEC7F0079AE3C /* IQNSArray+Sort.swift */; };
-		D0ADE0A71D6EEC7F0079AE3C /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0911D6EEC7F0079AE3C /* IQUIScrollView+Additions.swift */; };
-		D0ADE0A81D6EEC7F0079AE3C /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0921D6EEC7F0079AE3C /* IQUITextFieldView+Additions.swift */; };
-		D0ADE0A91D6EEC7F0079AE3C /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0931D6EEC7F0079AE3C /* IQUIView+Hierarchy.swift */; };
-		D0ADE0AA1D6EEC7F0079AE3C /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0941D6EEC7F0079AE3C /* IQUIViewController+Additions.swift */; };
-		D0ADE0AB1D6EEC7F0079AE3C /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0951D6EEC7F0079AE3C /* IQUIWindow+Hierarchy.swift */; };
-		D0ADE0AC1D6EEC7F0079AE3C /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0971D6EEC7F0079AE3C /* IQKeyboardManagerConstants.swift */; };
-		D0ADE0AD1D6EEC7F0079AE3C /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0981D6EEC7F0079AE3C /* IQKeyboardManagerConstantsInternal.swift */; };
-		D0ADE0AE1D6EEC7F0079AE3C /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0991D6EEC7F0079AE3C /* IQKeyboardManager.swift */; };
-		D0ADE0AF1D6EEC7F0079AE3C /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE09B1D6EEC7F0079AE3C /* IQKeyboardReturnKeyHandler.swift */; };
-		D0ADE0B01D6EEC7F0079AE3C /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE09D1D6EEC7F0079AE3C /* IQTextView.swift */; };
-		D0ADE0B11D6EEC7F0079AE3C /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE09F1D6EEC7F0079AE3C /* IQBarButtonItem.swift */; };
-		D0ADE0B21D6EEC7F0079AE3C /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0A01D6EEC7F0079AE3C /* IQPreviousNextView.swift */; };
-		D0ADE0B31D6EEC7F0079AE3C /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0A11D6EEC7F0079AE3C /* IQTitleBarButtonItem.swift */; };
-		D0ADE0B41D6EEC7F0079AE3C /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0A21D6EEC7F0079AE3C /* IQToolbar.swift */; };
-		D0ADE0B51D6EEC7F0079AE3C /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0A31D6EEC7F0079AE3C /* IQUIView+IQKeyboardToolbar.swift */; };
-		D0ADE0B61D6EEC7F0079AE3C /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0ADE0A51D6EEC7F0079AE3C /* IQKeyboardManager.bundle */; };
 		D0ADE0B81D6F24C50079AE3C /* ChooseGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0B71D6F24C50079AE3C /* ChooseGenderViewController.swift */; };
 		D0ADE0BA1D6F25AA0079AE3C /* ChooseBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0B91D6F25AA0079AE3C /* ChooseBirthdayViewController.swift */; };
 		D0ADE0BC1D6FE1580079AE3C /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADE0BB1D6FE1580079AE3C /* InputNameViewController.swift */; };
@@ -80,8 +58,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5F787CB21E6539370069982A /* Nimble.framework in Copy Files */,
-				5F787CB31E6539370069982A /* Quick.framework in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,48 +65,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1CA6EBF6EB8E5156271C68F2 /* Pods-BabyMomentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyMomentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyMomentTests/Pods-BabyMomentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		29A4E698AB4A967AA47BF72F /* Pods-BabyMoment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyMoment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyMoment/Pods-BabyMoment.debug.xcconfig"; sourceTree = "<group>"; };
+		3C7456200B70919630C2F9A5 /* Pods-BabyMoment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyMoment.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyMoment/Pods-BabyMoment.release.xcconfig"; sourceTree = "<group>"; };
 		5F05B98D1E713EAA00D81D20 /* MomentFactories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentFactories.swift; sourceTree = "<group>"; };
 		5F05B98F1E7152C000D81D20 /* MomentRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentRepositoryProtocol.swift; sourceTree = "<group>"; };
 		5F05B9901E7152C100D81D20 /* MomentsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentsViewModel.swift; sourceTree = "<group>"; };
 		5F05B9961E71530B00D81D20 /* MomentsViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentsViewModelSpec.swift; sourceTree = "<group>"; };
 		5F05B9991E71539100D81D20 /* MomentRepositorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentRepositorySpec.swift; sourceTree = "<group>"; };
 		5F05B99B1E71543C00D81D20 /* MomentRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentRepository.swift; sourceTree = "<group>"; };
-		5F0DD0F31D70050100E63FF2 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
 		5F0DD0F61D700A0900E63FF2 /* BirthdayHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayHelper.swift; sourceTree = "<group>"; };
 		5F64D7811E693E9500308160 /* MomentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentViewModel.swift; sourceTree = "<group>"; };
 		5F64D7841E693ECF00308160 /* MomentViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentViewModelSpec.swift; sourceTree = "<group>"; };
 		5F66452C1D78730500E25CB1 /* BabyProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyProfile.swift; sourceTree = "<group>"; };
-		5F66452E1D78F2E700E25CB1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		5F6645311D78F32800E25CB1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		5F787CB01E6539370069982A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		5F787CB11E6539370069982A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		5F787CB41E653F2D0069982A /* BirthdayHelperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayHelperSpec.swift; sourceTree = "<group>"; };
 		5F787CB61E654A3E0069982A /* BabyProfileSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyProfileSpec.swift; sourceTree = "<group>"; };
 		5FB288A81D7B107700DF386A /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
-		937F2F0C1D747FBE00232E52 /* DateTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = Carthage/Checkouts/DateTools/DateTools/DateTools.bundle; sourceTree = "<group>"; };
+		8539352E1A5633FB1156FB59 /* Pods_BabyMoment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyMoment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE62F3CC04BB7055266325D7 /* Pods-BabyMomentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyMomentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyMomentTests/Pods-BabyMomentTests.release.xcconfig"; sourceTree = "<group>"; };
 		D0ADE0531D6E92200079AE3C /* XLPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoViewController.swift; sourceTree = "<group>"; };
 		D0ADE0551D6E94A20079AE3C /* XLPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoCell.swift; sourceTree = "<group>"; };
 		D0ADE0571D6E96F00079AE3C /* XLPhotoFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPhotoFooterView.swift; sourceTree = "<group>"; };
 		D0ADE05E1D6ED76F0079AE3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D0ADE0601D6EDEAD0079AE3C /* HEXColor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HEXColor.framework; path = Carthage/Build/iOS/HEXColor.framework; sourceTree = "<group>"; };
-		D0ADE0901D6EEC7F0079AE3C /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
-		D0ADE0911D6EEC7F0079AE3C /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
-		D0ADE0921D6EEC7F0079AE3C /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
-		D0ADE0931D6EEC7F0079AE3C /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
-		D0ADE0941D6EEC7F0079AE3C /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
-		D0ADE0951D6EEC7F0079AE3C /* IQUIWindow+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIWindow+Hierarchy.swift"; sourceTree = "<group>"; };
-		D0ADE0971D6EEC7F0079AE3C /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
-		D0ADE0981D6EEC7F0079AE3C /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
-		D0ADE0991D6EEC7F0079AE3C /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
-		D0ADE09A1D6EEC7F0079AE3C /* IQKeyboardManagerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerSwift.h; sourceTree = "<group>"; };
-		D0ADE09B1D6EEC7F0079AE3C /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
-		D0ADE09D1D6EEC7F0079AE3C /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
-		D0ADE09F1D6EEC7F0079AE3C /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
-		D0ADE0A01D6EEC7F0079AE3C /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
-		D0ADE0A11D6EEC7F0079AE3C /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
-		D0ADE0A21D6EEC7F0079AE3C /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
-		D0ADE0A31D6EEC7F0079AE3C /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
-		D0ADE0A51D6EEC7F0079AE3C /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		D0ADE0B71D6F24C50079AE3C /* ChooseGenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseGenderViewController.swift; sourceTree = "<group>"; };
 		D0ADE0B91D6F25AA0079AE3C /* ChooseBirthdayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBirthdayViewController.swift; sourceTree = "<group>"; };
 		D0ADE0BB1D6FE1580079AE3C /* InputNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputNameViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +104,7 @@
 		D0C90F631D6D7D5E00D53A57 /* XLAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLAlbumCell.swift; sourceTree = "<group>"; };
 		D0C90F651D6D7D9C00D53A57 /* XLAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLAlbumViewController.swift; sourceTree = "<group>"; };
 		D0C90F681D6D823600D53A57 /* XLAlbumItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLAlbumItem.swift; sourceTree = "<group>"; };
+		E40DA127FF846615CBC02A50 /* Pods_BabyMomentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyMomentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,10 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F6645321D78F32800E25CB1 /* RealmSwift.framework in Frameworks */,
-				5F6645301D78F32800E25CB1 /* Realm.framework in Frameworks */,
-				5F0DD0F41D70050100E63FF2 /* DateTools.framework in Frameworks */,
-				D0ADE0611D6EDEAD0079AE3C /* HEXColor.framework in Frameworks */,
+				4F7D0016EA80D9306D889C7A /* Pods_BabyMoment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC05764CBBEB5776ADE64D1 /* Pods_BabyMomentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +194,17 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		BA7A996F116C3C491A87AD82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29A4E698AB4A967AA47BF72F /* Pods-BabyMoment.debug.xcconfig */,
+				3C7456200B70919630C2F9A5 /* Pods-BabyMoment.release.xcconfig */,
+				1CA6EBF6EB8E5156271C68F2 /* Pods-BabyMomentTests.debug.xcconfig */,
+				AE62F3CC04BB7055266325D7 /* Pods-BabyMomentTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D0ADE05B1D6ED5F80079AE3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,10 +217,8 @@
 		D0ADE0641D6EDF100079AE3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5F6645311D78F32800E25CB1 /* RealmSwift.framework */,
-				5F66452E1D78F2E700E25CB1 /* Realm.framework */,
-				5F0DD0F31D70050100E63FF2 /* DateTools.framework */,
-				D0ADE0601D6EDEAD0079AE3C /* HEXColor.framework */,
+				8539352E1A5633FB1156FB59 /* Pods_BabyMoment.framework */,
+				E40DA127FF846615CBC02A50 /* Pods_BabyMomentTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -262,86 +226,18 @@
 		D0ADE0651D6EE9180079AE3C /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				D0ADE08E1D6EEC7F0079AE3C /* IQKeyboardManagerSwift */,
 			);
 			path = Vender;
-			sourceTree = "<group>";
-		};
-		D0ADE08E1D6EEC7F0079AE3C /* IQKeyboardManagerSwift */ = {
-			isa = PBXGroup;
-			children = (
-				D0ADE08F1D6EEC7F0079AE3C /* Categories */,
-				D0ADE0961D6EEC7F0079AE3C /* Constants */,
-				D0ADE0991D6EEC7F0079AE3C /* IQKeyboardManager.swift */,
-				D0ADE09A1D6EEC7F0079AE3C /* IQKeyboardManagerSwift.h */,
-				D0ADE09B1D6EEC7F0079AE3C /* IQKeyboardReturnKeyHandler.swift */,
-				D0ADE09C1D6EEC7F0079AE3C /* IQTextView */,
-				D0ADE09E1D6EEC7F0079AE3C /* IQToolbar */,
-				D0ADE0A41D6EEC7F0079AE3C /* Resources */,
-			);
-			path = IQKeyboardManagerSwift;
-			sourceTree = "<group>";
-		};
-		D0ADE08F1D6EEC7F0079AE3C /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				D0ADE0901D6EEC7F0079AE3C /* IQNSArray+Sort.swift */,
-				D0ADE0911D6EEC7F0079AE3C /* IQUIScrollView+Additions.swift */,
-				D0ADE0921D6EEC7F0079AE3C /* IQUITextFieldView+Additions.swift */,
-				D0ADE0931D6EEC7F0079AE3C /* IQUIView+Hierarchy.swift */,
-				D0ADE0941D6EEC7F0079AE3C /* IQUIViewController+Additions.swift */,
-				D0ADE0951D6EEC7F0079AE3C /* IQUIWindow+Hierarchy.swift */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		D0ADE0961D6EEC7F0079AE3C /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				D0ADE0971D6EEC7F0079AE3C /* IQKeyboardManagerConstants.swift */,
-				D0ADE0981D6EEC7F0079AE3C /* IQKeyboardManagerConstantsInternal.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		D0ADE09C1D6EEC7F0079AE3C /* IQTextView */ = {
-			isa = PBXGroup;
-			children = (
-				D0ADE09D1D6EEC7F0079AE3C /* IQTextView.swift */,
-			);
-			path = IQTextView;
-			sourceTree = "<group>";
-		};
-		D0ADE09E1D6EEC7F0079AE3C /* IQToolbar */ = {
-			isa = PBXGroup;
-			children = (
-				D0ADE09F1D6EEC7F0079AE3C /* IQBarButtonItem.swift */,
-				D0ADE0A01D6EEC7F0079AE3C /* IQPreviousNextView.swift */,
-				D0ADE0A11D6EEC7F0079AE3C /* IQTitleBarButtonItem.swift */,
-				D0ADE0A21D6EEC7F0079AE3C /* IQToolbar.swift */,
-				D0ADE0A31D6EEC7F0079AE3C /* IQUIView+IQKeyboardToolbar.swift */,
-			);
-			path = IQToolbar;
-			sourceTree = "<group>";
-		};
-		D0ADE0A41D6EEC7F0079AE3C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D0ADE0A51D6EEC7F0079AE3C /* IQKeyboardManager.bundle */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		D0C90F2B1D6D489800D53A57 = {
 			isa = PBXGroup;
 			children = (
-				5F787CB01E6539370069982A /* Nimble.framework */,
-				5F787CB11E6539370069982A /* Quick.framework */,
-				937F2F0C1D747FBE00232E52 /* DateTools.bundle */,
 				D0ADE0641D6EDF100079AE3C /* Frameworks */,
 				D0C90F361D6D489800D53A57 /* BabyMoment */,
 				D0C90F4B1D6D489900D53A57 /* BabyMomentTests */,
 				D0C90F351D6D489800D53A57 /* Products */,
+				BA7A996F116C3C491A87AD82 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -477,11 +373,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0C90F511D6D489900D53A57 /* Build configuration list for PBXNativeTarget "BabyMoment" */;
 			buildPhases = (
+				1D44D2F93B2F01D591CBEF20 /* [CP] Check Pods Manifest.lock */,
 				D0C90F301D6D489800D53A57 /* Sources */,
 				D0C90F311D6D489800D53A57 /* Frameworks */,
 				D0C90F321D6D489800D53A57 /* Resources */,
-				D0ADE0631D6EDEDF0079AE3C /* ShellScript */,
 				5F446C701E5BFB2700984F85 /* Integrate Reveal server */,
+				B7B8972AF52B3FCB42FDFB9A /* [CP] Embed Pods Frameworks */,
+				C7C51366968A83151EC6906F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -496,10 +394,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0C90F541D6D489900D53A57 /* Build configuration list for PBXNativeTarget "BabyMomentTests" */;
 			buildPhases = (
+				27BCDEDAA106B3B857FC55D2 /* [CP] Check Pods Manifest.lock */,
 				D0C90F441D6D489900D53A57 /* Sources */,
 				D0C90F451D6D489900D53A57 /* Frameworks */,
 				D0C90F461D6D489900D53A57 /* Resources */,
 				5F787CAF1E651F8C0069982A /* Copy Files */,
+				491A29BFBCF4A78CA095FB54 /* [CP] Embed Pods Frameworks */,
+				83D16D6A4BE1CAB8B54D30CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -524,11 +425,11 @@
 					D0C90F331D6D489800D53A57 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = C85KQG8PYQ;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					D0C90F471D6D489900D53A57 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						TestTargetID = D0C90F331D6D489800D53A57;
 					};
 				};
@@ -558,9 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C90F421D6D489800D53A57 /* LaunchScreen.storyboard in Resources */,
-				937F2F0D1D747FBE00232E52 /* DateTools.bundle in Resources */,
 				D0ADE05F1D6ED76F0079AE3C /* Images.xcassets in Resources */,
-				D0ADE0B61D6EEC7F0079AE3C /* IQKeyboardManager.bundle in Resources */,
 				D0C90F601D6D778700D53A57 /* XLPhotoManager.storyboard in Resources */,
 				D0C90F3F1D6D489800D53A57 /* Assets.xcassets in Resources */,
 				D0C90F3D1D6D489800D53A57 /* Main.storyboard in Resources */,
@@ -577,6 +476,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1D44D2F93B2F01D591CBEF20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		27BCDEDAA106B3B857FC55D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		491A29BFBCF4A78CA095FB54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyMomentTests/Pods-BabyMomentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5F446C701E5BFB2700984F85 /* Integrate Reveal server */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -591,22 +535,50 @@
 			shellPath = /bin/sh;
 			shellScript = "REVEAL_APP_PATH=$(mdfind kMDItemCFBundleIdentifier=\"com.ittybittyapps.Reveal2\" | head -n 1)\nBUILD_SCRIPT_PATH=\"${REVEAL_APP_PATH}/Contents/SharedSupport/Scripts/reveal_server_build_phase.sh\"\nif [ \"${REVEAL_APP_PATH}\" -a -e \"${BUILD_SCRIPT_PATH}\" ]; then\n\"${BUILD_SCRIPT_PATH}\"\nelse\necho \"Reveal Server not loaded: Cannot find a compatible Reveal app.\"\nfi";
 		};
-		D0ADE0631D6EDEDF0079AE3C /* ShellScript */ = {
+		83D16D6A4BE1CAB8B54D30CA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/HEXColor.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/DateTools.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyMomentTests/Pods-BabyMomentTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7B8972AF52B3FCB42FDFB9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyMoment/Pods-BabyMoment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7C51366968A83151EC6906F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyMoment/Pods-BabyMoment-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -615,40 +587,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0ADE0AF1D6EEC7F0079AE3C /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				D0C90F3A1D6D489800D53A57 /* ViewController.swift in Sources */,
 				D0C90F641D6D7D5E00D53A57 /* XLAlbumCell.swift in Sources */,
 				D0ADE0561D6E94A20079AE3C /* XLPhotoCell.swift in Sources */,
 				D0ADE0541D6E92200079AE3C /* XLPhotoViewController.swift in Sources */,
-				D0ADE0B11D6EEC7F0079AE3C /* IQBarButtonItem.swift in Sources */,
 				D0ADE0BA1D6F25AA0079AE3C /* ChooseBirthdayViewController.swift in Sources */,
-				D0ADE0AA1D6EEC7F0079AE3C /* IQUIViewController+Additions.swift in Sources */,
-				D0ADE0B51D6EEC7F0079AE3C /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				D0ADE0581D6E96F00079AE3C /* XLPhotoFooterView.swift in Sources */,
 				D0C90F661D6D7D9C00D53A57 /* XLAlbumViewController.swift in Sources */,
 				D0ADE0B81D6F24C50079AE3C /* ChooseGenderViewController.swift in Sources */,
 				5F64D7821E693E9500308160 /* MomentViewModel.swift in Sources */,
-				D0ADE0B41D6EEC7F0079AE3C /* IQToolbar.swift in Sources */,
-				D0ADE0A61D6EEC7F0079AE3C /* IQNSArray+Sort.swift in Sources */,
-				D0ADE0AC1D6EEC7F0079AE3C /* IQKeyboardManagerConstants.swift in Sources */,
 				5F05B9911E7152C100D81D20 /* MomentRepositoryProtocol.swift in Sources */,
 				D0C90F5D1D6D722400D53A57 /* SingleMomentCell.swift in Sources */,
 				5F05B9921E7152C100D81D20 /* MomentsViewModel.swift in Sources */,
 				D0C90F691D6D823600D53A57 /* XLAlbumItem.swift in Sources */,
-				D0ADE0AD1D6EEC7F0079AE3C /* IQKeyboardManagerConstantsInternal.swift in Sources */,
-				D0ADE0A71D6EEC7F0079AE3C /* IQUIScrollView+Additions.swift in Sources */,
 				5F05B99C1E71543C00D81D20 /* MomentRepository.swift in Sources */,
-				D0ADE0AB1D6EEC7F0079AE3C /* IQUIWindow+Hierarchy.swift in Sources */,
-				D0ADE0AE1D6EEC7F0079AE3C /* IQKeyboardManager.swift in Sources */,
-				D0ADE0A81D6EEC7F0079AE3C /* IQUITextFieldView+Additions.swift in Sources */,
 				5FB288A91D7B107700DF386A /* Moment.swift in Sources */,
 				D0ADE0BC1D6FE1580079AE3C /* InputNameViewController.swift in Sources */,
-				D0ADE0B21D6EEC7F0079AE3C /* IQPreviousNextView.swift in Sources */,
-				D0ADE0B01D6EEC7F0079AE3C /* IQTextView.swift in Sources */,
 				5F66452D1D78730500E25CB1 /* BabyProfile.swift in Sources */,
-				D0ADE0A91D6EEC7F0079AE3C /* IQUIView+Hierarchy.swift in Sources */,
 				D0C90F381D6D489800D53A57 /* AppDelegate.swift in Sources */,
-				D0ADE0B31D6EEC7F0079AE3C /* IQTitleBarButtonItem.swift in Sources */,
 				5F0DD0F71D700A0900E63FF2 /* BirthdayHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,6 +742,7 @@
 		};
 		D0C90F521D6D489900D53A57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A4E698AB4A967AA47BF72F /* Pods-BabyMoment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -801,12 +758,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tw.dev.BabyMoment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		D0C90F531D6D489900D53A57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C7456200B70919630C2F9A5 /* Pods-BabyMoment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -822,12 +780,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tw.dev.BabyMoment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		D0C90F551D6D489900D53A57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CA6EBF6EB8E5156271C68F2 /* Pods-BabyMomentTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -838,13 +797,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kotlinchina.BabyMomentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabyMoment.app/BabyMoment";
 			};
 			name = Debug;
 		};
 		D0C90F561D6D489900D53A57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE62F3CC04BB7055266325D7 /* Pods-BabyMomentTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -855,7 +815,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kotlinchina.BabyMomentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabyMoment.app/BabyMoment";
 			};
 			name = Release;

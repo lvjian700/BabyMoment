@@ -1,7 +1,7 @@
 import UIKit
 import Photos
-import HEXColor
-import DateTools
+import UIColor_Hex_Swift
+import DateToolsSwift
 
 class TabBarVC: UITabBarController {
     override func viewDidLoad() {
@@ -14,13 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: MomentsViewModel!
-    var birthday: NSDate!
+    var birthday: Date!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.tintColor = UIColor(rgba: "#F6DC6E")
+        self.tabBarController?.tabBar.tintColor = UIColor("#F6DC6E")
         
-        birthday = BabyProfile.currentProfile()!.birthday!
+        
+        birthday = BabyProfile.currentProfile()!.birthday! as Date!
         viewModel = MomentsViewModel(MomentRepository(), birthday: birthday)
         viewModel.configureCellModels()
         viewModel.subscribeToChanged { [weak self] in
@@ -42,13 +43,13 @@ class ViewController: UIViewController {
         tableView.reloadData()
     }
     
-    @IBAction func selectPhoto(sender: AnyObject) {
+    @IBAction func selectPhoto(_ sender: AnyObject) {
         PHPhotoLibrary.requestAuthorization { [weak self] status -> Void in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if (status == PHAuthorizationStatus.Authorized) {
-                    let picker = UIStoryboard.init(name: "XLPhotoManager", bundle: nil).instantiateViewControllerWithIdentifier("XLPhotoNavigator") as! XLNavigationViewController
+            DispatchQueue.main.async(execute: { () -> Void in
+                if (status == PHAuthorizationStatus.authorized) {
+                    let picker = UIStoryboard.init(name: "XLPhotoManager", bundle: nil).instantiateViewController(withIdentifier: "XLPhotoNavigator") as! XLNavigationViewController
                     picker.photoDelegate = self
-                    self?.presentViewController(picker, animated: true, completion: nil)
+                    self?.present(picker, animated: true, completion: nil)
                 } else {
                     print("NoPhotoAuthorization")
                 }
@@ -59,13 +60,13 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
   
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let count = viewModel.cellViewModels?.count else { return 0 }
         return count
     }
   
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SinglePhotoCell", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SinglePhotoCell", for: indexPath)
         
         guard let momentCell = cell as? SingleMomentCell else { return UITableViewCell() }
         guard let cellViewModels = viewModel.cellViewModels else { return UITableViewCell() }
@@ -77,7 +78,7 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: XLPhotoDelegate {
-    func didSelectPhotos(selectedAsset: [PHAsset]) {
+    func didSelectPhotos(_ selectedAsset: [PHAsset]) {
         if selectedAsset.count == 0 {
             return
         }

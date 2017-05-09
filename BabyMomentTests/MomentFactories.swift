@@ -2,12 +2,12 @@ import Foundation
 import RealmSwift
 @testable import BabyMoment
 
-func daysAgo(days:Int) -> NSDate {
-    let now = NSDate()
-    return now.dateByAddingDays(-days)
+func daysAgo(_ days:Int) -> Date {
+    let now = Date()
+    return (now as NSDate).addingDays(-days)
 }
 
-func saveMoment(m: Moment) {
+func saveMoment(_ m: Moment) {
     let realm = try! Realm()
     try! realm.write {
         realm.add(m)
@@ -15,19 +15,19 @@ func saveMoment(m: Moment) {
 }
 
 class MomentFactories {
-    static var birthday: NSDate? {
-        let formatter = NSDateFormatter()
+    static var birthday: Date? {
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
 
-        return formatter.dateFromString("2015-09-11")
+        return formatter.date(from: "2015-09-11")
     }
 
     static func buildMoment() -> Moment {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
 
-        let takenDate:NSDate! = formatter.dateFromString("2016-09-2")
-        let uploadedAt:NSDate = daysAgo(3)
+        let takenDate:Date! = formatter.date(from: "2016-09-2")
+        let uploadedAt:Date = daysAgo(3)
 
         return Moment(value: [
             "assetLocationId": "assetId",

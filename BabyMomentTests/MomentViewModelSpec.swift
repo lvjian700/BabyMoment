@@ -1,7 +1,7 @@
 import Quick
 import Nimble
 import RealmSwift
-import DateTools
+import DateToolsSwift
 @testable import BabyMoment
 
 class MomentViewModelSpec: QuickSpec {

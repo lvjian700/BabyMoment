@@ -33,7 +33,7 @@ class MomentViewModel {
     }
 
     var photoTakenDesc: String {
-        let takenDate: Date = self.model.photoTakenDate as Date
+        let takenDate = self.model.photoTakenDate
         return takenDate.howOld(birthday)
     }
 

@@ -1,10 +1,11 @@
 import Foundation
 import RealmSwift
+import DateToolsSwift
 @testable import BabyMoment
 
 func daysAgo(_ days:Int) -> Date {
     let now = Date()
-    return (now as NSDate).addingDays(-days)
+    return now.add(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: -days, weeks: 0, months: 0, years: 0))
 }
 
 func saveMoment(_ m: Moment) {

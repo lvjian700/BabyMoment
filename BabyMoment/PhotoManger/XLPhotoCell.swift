@@ -16,20 +16,20 @@ class XLPhotoCell: UICollectionViewCell {
 }
 
 extension XLPhotoCell {
-    func configCell(asset: PHAsset) {
+    func configCell(_ asset: PHAsset) {
         let request = PHImageRequestOptions()
-        request.deliveryMode = .Opportunistic
+        request.deliveryMode = .opportunistic
         
-        let scale = UIScreen.mainScreen().scale
+        let scale = UIScreen.main.scale
         let targetSize = CGSize(width: 70 * scale, height: 70 * scale)
         
-        let manager = PHImageManager.defaultManager()
+        let manager = PHImageManager.default()
         
         if tag != 0 {
             manager.cancelImageRequest(PHImageRequestID(tag))
         }
         
-        tag = Int(manager.requestImageForAsset(asset, targetSize: targetSize, contentMode: PHImageContentMode.AspectFill, options: request) { (image, _) -> Void in
+        tag = Int(manager.requestImage(for: asset, targetSize: targetSize, contentMode: PHImageContentMode.aspectFill, options: request) { (image, _) -> Void in
             self.photoImageView.image = image
             })
     }

@@ -1,6 +1,6 @@
 import UIKit
 import Photos
-import DateTools
+import DateToolsSwift
 import RealmSwift
 
 class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
@@ -19,11 +19,11 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
         textField.delegate = self
     }
 
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         textFieldShouldReturn(textField)
     }
 
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let message = textField.text {
             self.viewModel.message = message
         }
@@ -32,7 +32,7 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
         return true
     }
     
-    func configureCell(cellViewModel: MomentViewModel) {
+    func configureCell(_ cellViewModel: MomentViewModel) {
         self.viewModel      = cellViewModel
         self.textField.text = viewModel.message
         self.time.text      = viewModel.photoTakenDesc
@@ -44,20 +44,20 @@ class SingleMomentCell: UITableViewCell, UITextFieldDelegate {
         }
     }
     
-    func setImageFromLocal(imageView: UIImageView, assetLocationId: String) {
-        let result: PHFetchResult = PHAsset.fetchAssetsWithLocalIdentifiers([assetLocationId], options: nil)
+    func setImageFromLocal(_ imageView: UIImageView, assetLocationId: String) {
+        let result: PHFetchResult = PHAsset.fetchAssets(withLocalIdentifiers: [assetLocationId], options: nil)
         guard let firstResult = result.firstObject else { return }
         
-        let asset:PHAsset = firstResult as! PHAsset
+        let asset:PHAsset = firstResult 
         
         let request = PHImageRequestOptions()
-        request.resizeMode = .Exact
-        request.deliveryMode = .HighQualityFormat
-        let manager = PHImageManager.defaultManager()
-        let scale = UIScreen.mainScreen().scale
-        let width = UIScreen.mainScreen().bounds.width
+        request.resizeMode = .exact
+        request.deliveryMode = .highQualityFormat
+        let manager = PHImageManager.default()
+        let scale = UIScreen.main.scale
+        let width = UIScreen.main.bounds.width
         let targetSize = CGSize(width: width * scale, height: width * 0.618 * scale)
-        manager.requestImageForAsset(asset, targetSize: targetSize, contentMode: PHImageContentMode.AspectFill, options: request) { (image, _) -> Void in
+        manager.requestImage(for: asset, targetSize: targetSize, contentMode: PHImageContentMode.aspectFill, options: request) { (image, _) -> Void in
             imageView.image = image
         }
     }

@@ -1,12 +1,13 @@
 import Foundation
 import RealmSwift
+import DateToolsSwift
 
 class MomentViewModel {
     let model: Moment
-    let birthday: NSDate
+    let birthday: Date
     let assetLocationId: String
 
-    required init(_ momentModel: Moment, birthday: NSDate) {
+    required init(_ momentModel: Moment, birthday: Date) {
         self.model     = momentModel
         self.birthday  = birthday
         self.assetLocationId = momentModel.assetLocationId
@@ -32,11 +33,11 @@ class MomentViewModel {
     }
 
     var photoTakenDesc: String {
-        let takenDate: NSDate = self.model.photoTakenDate
+        let takenDate = self.model.photoTakenDate
         return takenDate.howOld(birthday)
     }
 
     var uploadedAtDesc: String {
-        return model.uploadedAt.timeAgoSinceNow()
+        return self.model.uploadedAt.timeAgoSinceNow
     }
 }

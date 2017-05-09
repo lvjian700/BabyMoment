@@ -17,7 +17,7 @@ class XLAlbumViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var albumItems = [XLAlbumItem]()
+    fileprivate var albumItems = [XLAlbumItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,77 +30,77 @@ class XLAlbumViewController: UIViewController {
         directJumpToPhotoPage()
     }
     
-    @IBAction func cancelAction(sender: AnyObject) {
-        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelAction(_ sender: AnyObject) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
-    private func configAlbumTableView() {
+    fileprivate func configAlbumTableView() {
         let smartAlbums = getSystemPhotoPHFetchResult()
         savePHCollectionByFetchResult(smartAlbums)
         
-        let topLevelUserCollections = PHCollectionList.fetchTopLevelUserCollectionsWithOptions(nil)
-        savePHCollectionByFetchResult(topLevelUserCollections)
+        let topLevelUserCollections = PHCollectionList.fetchTopLevelUserCollections(with: nil)
+        savePHCollectionByFetchResult([topLevelUserCollections])
     }
     
-    private func getSystemPhotoPHFetchResult() -> [PHFetchResult] {
-        var fetchResults = [PHFetchResult]()
-        fetchResults.append(PHAssetCollection.fetchAssetCollectionsWithType(.SmartAlbum, subtype: .SmartAlbumUserLibrary, options: nil))
-        fetchResults.append(PHAssetCollection.fetchAssetCollectionsWithType(.SmartAlbum, subtype: .SmartAlbumRecentlyAdded, options: nil))
-        fetchResults.append(PHAssetCollection.fetchAssetCollectionsWithType(.SmartAlbum, subtype: .SmartAlbumFavorites, options: nil))
-        fetchResults.append(PHAssetCollection.fetchAssetCollectionsWithType(.SmartAlbum, subtype: .SmartAlbumPanoramas, options: nil))
+    fileprivate func getSystemPhotoPHFetchResult() -> [PHFetchResult<PHCollection>] {
+        var fetchResults = [PHFetchResult<PHCollection>]()
+        fetchResults.append(PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: nil) as! PHFetchResult<PHCollection>)
+        fetchResults.append(PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumRecentlyAdded, options: nil) as! PHFetchResult<PHCollection>)
+        fetchResults.append(PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumFavorites, options: nil) as! PHFetchResult<PHCollection>)
+        fetchResults.append(PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumPanoramas, options: nil) as! PHFetchResult<PHCollection>)
         return fetchResults
     }
     
-    private func savePHCollectionByFetchResult(fetchResults: [PHFetchResult]) {
+    fileprivate func savePHCollectionByFetchResult(_ fetchResults: [PHFetchResult<PHCollection>]) {
         for fetchResult in fetchResults {
             for index in 0..<fetchResult.count {
-                if let assetCollection = fetchResult.objectAtIndex(index) as? PHAssetCollection {
+                if let assetCollection = fetchResult.object(at: index) as? PHAssetCollection {
                     albumItems.append(XLAlbumItem(albumTitle: assetCollection.localizedTitle!, assetCollection: assetCollection))
                 }
             }
         }
     }
     
-    private func savePHCollectionByFetchResult(fetchResult: PHFetchResult) {
+    fileprivate func savePHCollectionByFetchResult(_ fetchResult: PHFetchResult<AnyObject>) {
         for index in 0 ..< fetchResult.count {
-            if let collection = fetchResult.objectAtIndex(index) as? PHAssetCollection {
+            if let collection = fetchResult.object(at: index) as? PHAssetCollection {
                 albumItems.append(XLAlbumItem(albumTitle: collection.localizedTitle!, assetCollection: collection))
             }
         }
     }
     
-    private func directJumpToPhotoPage() {
+    fileprivate func directJumpToPhotoPage() {
         let photoViewController = getPhotoViewControllerByFetchResult(getFetchResultByPHAssetCollection(albumItems[0].assetCollection))
         self.navigationController?.pushViewController(photoViewController, animated: false)
     }
     
-    private func getPhotoViewControllerByFetchResult(fetchResult: PHFetchResult) -> XLPhotoViewController {
-        let photoViewController = UIStoryboard.init(name: "XLPhotoManager", bundle: nil).instantiateViewControllerWithIdentifier("XLPhotoViewController") as! XLPhotoViewController
+    fileprivate func getPhotoViewControllerByFetchResult(_ fetchResult: PHFetchResult<AnyObject>) -> XLPhotoViewController {
+        let photoViewController = UIStoryboard.init(name: "XLPhotoManager", bundle: nil).instantiateViewController(withIdentifier: "XLPhotoViewController") as! XLPhotoViewController
         photoViewController.fetchResult = fetchResult
         return photoViewController
     }
     
-    private func getFetchResultByPHAssetCollection(assetCollection: PHAssetCollection) -> PHFetchResult {
+    fileprivate func getFetchResultByPHAssetCollection(_ assetCollection: PHAssetCollection) -> PHFetchResult<AnyObject> {
         let options = PHFetchOptions()
         options.sortDescriptors = [
             NSSortDescriptor(key: "creationDate", ascending: true)
         ]
-        return PHAsset.fetchAssetsInAssetCollection(assetCollection, options: nil)
+        return PHAsset.fetchAssets(in: assetCollection, options: nil) as! PHFetchResult<AnyObject>
     }
 }
 
 extension XLAlbumViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return albumItems.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AlbumCell", forIndexPath: indexPath) as! XLAlbumCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as! XLAlbumCell
         cell.configCell(albumItems[indexPath.row].albumTitle, assetCollection: albumItems[indexPath.row].assetCollection)
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let photoViewController = getPhotoViewControllerByFetchResult(getFetchResultByPHAssetCollection(albumItems[indexPath.row].assetCollection))
         self.navigationController?.pushViewController(photoViewController, animated: true)
     }

@@ -14,34 +14,34 @@ class InputNameViewController: UIViewController {
         header.layer.shadowOpacity = 0.1
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         nameTextField.becomeFirstResponder()
     }
     
-    @IBAction func saveName(sender: AnyObject) {
+    @IBAction func saveName(_ sender: AnyObject) {
         saveName(nameTextField.text!)
         showNextPage()
     }
     
-    private func showNextPage() {
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
-        app.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TabBarVC") as! TabBarVC
+    fileprivate func showNextPage() {
+        let app = UIApplication.shared.delegate as! AppDelegate
+        app.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
     }
     
-    private func saveName(name: String) {
+    fileprivate func saveName(_ name: String) {
         BabyProfile.saveName(name)
         BabyProfile.initWithUserDefault().save()
     }
 }
 
 extension InputNameViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         saveName(nameTextField.text!)
         showNextPage()
         return true
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         saveName(nameTextField.text!)
         showNextPage()
     }

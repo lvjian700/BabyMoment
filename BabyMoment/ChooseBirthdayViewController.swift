@@ -7,25 +7,25 @@ class ChooseBirthdayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.hidden = true
+        self.navigationController?.navigationBar.isHidden = true
         
         header.layer.shadowOffset = CGSize(width: 0, height: 1)
         header.layer.shadowRadius = 1
         header.layer.shadowOpacity = 0.1
     }
     
-    @IBAction func chooseDate(sender: AnyObject) {
+    @IBAction func chooseDate(_ sender: AnyObject) {
         setBirthday(datePicker.date)
         showNextPage()
     }
     
-    private func showNextPage() {
+    fileprivate func showNextPage() {
         let inputNameVC =
-            UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("InputNameViewController") as! InputNameViewController
+            UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InputNameViewController") as! InputNameViewController
         navigationController?.pushViewController(inputNameVC, animated: true)
     }
     
-    private func setBirthday(date: NSDate) {
+    fileprivate func setBirthday(_ date: Date) {
         BabyProfile.saveBirthday(datePicker.date)
     }
 }

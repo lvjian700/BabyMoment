@@ -1,12 +1,11 @@
 import Foundation
 
-extension NSDate {
-    func howOld(birthday: NSDate) -> String {
+extension Date {
+    func howOld(_ birthday: Date) -> String {
         
-        let cal:NSCalendar = NSCalendar.currentCalendar()
-        let comps:NSDateComponents = cal.components([.Month, .Day], fromDate: birthday, toDate: self, options: NSCalendarOptions.WrapComponents)
+        let cal:Calendar = Calendar.current
+        let comps = cal.dateComponents([.month, .day], from: birthday, to: self)
         
-        
-        return "\(comps.month)个月\(comps.day)天"
+        return "\(comps.month!)个月\(comps.day!)天"
     }
 }

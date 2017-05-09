@@ -11,19 +11,19 @@ class MockMomentRepository: MomentRepositoryProtocol {
         return [ Moment() ]
     }
 
-    func create(moment: Moment) {
+    func create(_ moment: Moment) {
         inMemory.append(moment)
     }
 
     func fireChangedAsync() {
-        dispatch_async(dispatch_get_main_queue()) { [weak self] in
+        DispatchQueue.main.async { [weak self] in
             if let block = self?.changedBlock {
                 block()
             }
         }
     }
 
-    func subscribeToChanged(block: () -> Void) {
+    func subscribeToChanged(_ block: @escaping () -> Void) {
         changedBlock = block
     }
 
@@ -35,7 +35,7 @@ class MockMomentRepository: MomentRepositoryProtocol {
 class MomentsViewModelSpec: QuickSpec {
     override func spec() {
         let repository = MockMomentRepository()
-        let birthday: NSDate! = MomentFactories.birthday
+        let birthday: Date! = MomentFactories.birthday
 
         describe("#configureCellModels") {
             let viewModel  = MomentsViewModel(repository, birthday: birthday)
@@ -51,7 +51,7 @@ class MomentsViewModelSpec: QuickSpec {
 
         describe("#createMoment") {
             let viewModel = MomentsViewModel(repository, birthday: birthday)
-            let photoDate = NSDate()
+            let photoDate = Date()
 
             beforeEach {
                 viewModel.createMoment("locationId", photoTakenDate: photoDate)
